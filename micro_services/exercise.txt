@@ -1,3 +1,7 @@
 Create two dockers that together work to create a full application.
 
+both of the dockers listen to web requests.
+Docker1 prodcues a page with a link to a page by docker2.
+Docker2 produces a page with a link to a page by docker1.
+
 The idea is that every single docker is a "micro service"
