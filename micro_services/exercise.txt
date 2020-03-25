@@ -1,0 +1,3 @@
+Create two dockers that together work to create a full application.
+
+The idea is that every single docker is a "micro service"
