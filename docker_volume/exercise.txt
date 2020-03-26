@@ -1,0 +1,6 @@
+1. Create a docker volume using "docker volume ..."
+2. See the volume using "docker volume ls"
+3. Run two containers that manipulate the data on the volume
+	at the same time.
+4. Stop the containers.
+5. See that the data on the volume has been changed.
