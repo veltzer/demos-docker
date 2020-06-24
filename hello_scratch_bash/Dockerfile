@@ -1,7 +1,8 @@
 
 
 
-FROM scratch:latest
-COPY /usr/bin/bash /bash
-COPY app.bash /app.bash
-CMD ["/bash", "/app.bash"]
+FROM scratch
+COPY bash-static /
+COPY app.bash /
+COPY my_sleep /
+CMD ["/bash-static", "/app.bash"]
