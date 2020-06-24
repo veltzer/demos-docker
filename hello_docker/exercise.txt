@@ -1,5 +1,0 @@
-
-
-
-Create a docker process which prints out
-"hello_docker" and that's it.
