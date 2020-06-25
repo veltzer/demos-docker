@@ -4,9 +4,7 @@ import time
 import os.path
 import sys
 
-folder=sys.argv[1]
-prefix=sys.argv[2]
-filename=os.path.join(folder, "{}data.txt".format(prefix))
+filename=sys.argv[1]
 
 with open(filename, "wt") as f:
     i=0

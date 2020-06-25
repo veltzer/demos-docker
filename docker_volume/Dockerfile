@@ -1,5 +1,2 @@
-FROM python:3
+FROM python:3-alpine
 COPY writer.py /
-WORKDIR /
-ENTRYPOINT ["python"]
-CMD ["writer.py", "data"]
