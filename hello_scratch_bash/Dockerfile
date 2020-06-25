@@ -1,6 +1,3 @@
-
-
-
 FROM scratch
 COPY bash-static /
 COPY app.bash /
