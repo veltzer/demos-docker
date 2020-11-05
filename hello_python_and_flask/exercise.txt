@@ -1,0 +1,6 @@
+
+- build a webserver in docker built on python + flask.
+- use port 8080 since that's the only port that is opened for the machine
+	you have on AWS.
+- access you webserver via:
+	http://[ip]:8080/
