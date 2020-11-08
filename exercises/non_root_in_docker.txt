@@ -1,0 +1,15 @@
+
+Create a docker image which runs a python app as a non root user.
+
+Prepare, when building the docker image, data for the app.
+
+Show that:
+- your app doesn't run as root (os.getuid())
+- that your app can read the data.
+- that your app can write to the file which is the data.
+
+hints:
+WORKDIR
+RUN chown
+RUN mkdir
+COPY
