@@ -1,3 +1,3 @@
 FROM python:3-alpine
 COPY writer.py /
-CMD ["python", "writer.py", "data"]
+CMD ["/writer.py", "data"]

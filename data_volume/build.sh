@@ -1,4 +1,7 @@
 #!/bin/sh
-docker build --tag data_volume:latest --file Dockerfile .
-# everything is built, take a look
-docker images
+if [ -x ./before_build.sh ]
+then
+	./before_build.sh
+fi
+image_name=$(basename $PWD)
+docker build --tag "${image_name}:latest" .
