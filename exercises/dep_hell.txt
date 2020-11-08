@@ -1,0 +1,2 @@
+	package A needs package B with version >= 7
+	pakcage C needs package B with version <= 5

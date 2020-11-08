@@ -1,0 +1,16 @@
+- pull the python:3-slim container.
+- enter the container using:
+	$ docker run -it python:3-slim bash
+- write a python script that never ends.
+	================>8===========
+	#!/usr/bin/python3
+	import time
+	while True:
+		print("nag nag...")
+		time.sleep(1)
+	================>8===========
+- while the container is running open another connection to the machine.
+- find out the id of the containr from the output of:
+	$ docker container ls
+- kill the container using:
+	$ docker container kill [pid]

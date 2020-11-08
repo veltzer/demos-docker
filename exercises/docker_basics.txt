@@ -1,0 +1,12 @@
+1. go to docker hub
+2. find an image you like (make sure it is for x86_64 architecture)
+3. pull them from dockerhub:
+	$ docker pull [imagename]
+4. see that you the have image using:
+	$ docker images
+5. run the image, thereby creating a container:
+	$ docker run -it [image_id]
+5.5 explore the contair by lauching bash on it this way:
+	$ docker run -it [image_id] bash
+6. see your running containers via:
+	$ docker container ls
