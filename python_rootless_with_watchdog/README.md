@@ -1,1 +1,2 @@
-This example shows how NOT to run as root in docker
+This example shows a simple watchdog example written in python.
+Both the watchdog and the application are both in python.
