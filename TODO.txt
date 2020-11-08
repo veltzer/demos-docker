@@ -2,3 +2,8 @@
 	the idea is to run a python process to print os.geteuid()
 - do example of complex build process.
 - do example of building stuff on top of a distribution (say ubuntu).
+- see logs
+- enter a running container
+- postmorten of a container
+	docker container ls -a
+	docker exec
