@@ -1,3 +1,3 @@
 FROM scratch
-COPY bash-static /bin/bash
+COPY bash /bin/bash
 CMD ["/bin/bash"]
