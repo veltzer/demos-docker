@@ -1,2 +1,3 @@
 #!/bin/sh
-docker build --tag hello_python:latest --file Dockerfile .
+image_name=$(basename $PWD)
+docker build --tag "${image_name}:latest" .
