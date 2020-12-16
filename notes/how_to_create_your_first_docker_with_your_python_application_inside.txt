@@ -1,0 +1,21 @@
+- write your python application.
+	In the shbang line put, instead of #!/usr/bin/python3
+	#!/usr/bin/env python3
+
+- write a file and call it "Dockerfile" with the following content:
+==========8<==========
+FROM python:3-slim
+COPY hello.py /
+CMD ["/hello.py"]
+==========8<==========
+
+- build your docker image with:
+	$ docker build -t hello_python .
+
+- see you newly created image with:
+	$ docker images
+
+- run your newly creaetd image with:
+	$ docker run -it [image_name]
+	or in your case:
+	$ docker run -it hello_python

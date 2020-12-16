@@ -1,0 +1,13 @@
+You will need the minial web application in python.
+
+- create a docker image with a python web server running in it.
+- access the web server from the host.
+
+You will an image with:
+	- python
+	- flask python module
+	- your application
+
+You will also need to open the port on which the application is listening (5000).
+
+Use wget(1) to check if your web server is running and you can actually access it.

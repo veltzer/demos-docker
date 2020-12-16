@@ -1,0 +1,17 @@
+
+
+- write the code in a file called [filename]
+- now you can run it with:
+	$ python3 [filename]
+- if you want the script to be executable, this means that
+	you will be able to run it on its own then:
+	1) Add a first line of the form:
+		#!/usr/bin/python3
+	2) Change the script to be executable using:
+		$ chmod +x [filename]
+
+* you can, if you want, to call python files with a .py extension
+	BUT THIS IS NOT MANDATORY.
+	You can call script ANY WAY YOU LIKE.
+	People call python script with .py ONLY to remind themselves that this
+	is a python script, NOT because of some techical requirement.

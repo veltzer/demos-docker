@@ -1,0 +1,18 @@
+	
+	If you are on MacOSX or Linux use:
+		$ ssh -i key.pem ubuntu@[ip]
+	for example:
+		$ ssh -i key.pem ubuntu@3.123.6.158
+
+		$ chmod 400 key.pem
+
+
+	For people on windows:
+		There are lots of tools to use ssh.
+		If you know and love a tool, use it.
+
+		If you don't have any idea what I'm talking about I recommend either
+		"putty" or "moba xterm".
+		Download whatever seems nicer to you.
+		If you have "Linux for windows" you do what normal people do (see above).
+		For newbies I recommend "moba xterm"
