@@ -4,3 +4,6 @@
 - postmorten of a container
 	docker container ls -a
 	docker exec
+- docker secrets example
+- docker bridge example of connecting two contaners with a bridge
+	but without access from the outside machine.
