@@ -5,4 +5,4 @@ import time
 
 print("Hello from python inside docker!")
 time.sleep(40)
-sys.exit(0)
+sys.exit(7)

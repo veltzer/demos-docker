@@ -1,5 +1,3 @@
-
-
 Create a python app that writes some data to disk periodically
 =======================================
 with open("datafile.txt") as f:
