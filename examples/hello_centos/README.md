@@ -1,1 +1,1 @@
-This is a docker image based on ubuntu
+This is a docker image based on centos
