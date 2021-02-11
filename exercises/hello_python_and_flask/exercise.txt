@@ -1,6 +1,10 @@
 
 - build a webserver in docker built on python + flask.
+	* you can find examples like these all over the web
 - use port 8080 since that's the only port that is opened for the machine
 	you have on AWS.
+- you will need to make sure your port 8080 is open and exposed to the outside
+	work.
+	* hint: docker run --network
 - access you webserver via:
-	http://[ip]:8080/
+	http://[your_ip]:8080/

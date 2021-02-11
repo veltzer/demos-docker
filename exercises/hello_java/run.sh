@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run -it hello_java
+docker run hello_java
