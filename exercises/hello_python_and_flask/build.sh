@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build --tag hello_python_and_flask:latest --file Dockerfile .
+docker build --tag hello_python_and_flask:latest .
