@@ -27,8 +27,8 @@ def add():
     a=int(request.args.get("a"))
     b=int(request.args.get("b"))
     # This is the code that makes the request to the other micro-service
-    params = {'a':a, 'b': b} 
-    r = requests.get(url = "http://localhost:8081/add", params = params) 
+    params = {'a':a, 'b': b}
+    r = requests.get(url = "http://localhost:8081/add", params = params)
     assert r.status_code == 200
     c = r.text
     return f"the result is {c}"
