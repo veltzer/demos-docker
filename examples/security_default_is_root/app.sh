@@ -1,10 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 id
 whoami
-echo $UID
-echo $EUID
-while [[ true ]]
-do
-	echo "im alive..."
-	sleep 2
-done
+echo $UID $EUID

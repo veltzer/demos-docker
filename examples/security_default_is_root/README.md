@@ -1,5 +1,3 @@
-
-
 This demo shows that by default docker runs it's process
 as root.
 

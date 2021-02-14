@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM bash:latest
 # This is the simple example
 # CMD ["/usr/bin/id"]
 # This is the complex example
