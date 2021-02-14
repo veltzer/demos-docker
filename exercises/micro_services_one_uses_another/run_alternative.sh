@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-# THIS SOLUTION DOES NOT WORK
-
 # In this version of the run script we do not use "--network host"
 # which is a security hazard. We will try another configuration which is safer...
 docker run -d --name app1 app1
