@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/local/bin/python3
 
 from flask import Flask
 from flask import request
@@ -10,9 +10,9 @@ form="""
 <html><body>
 <form action="/add" method="get">
 <label for="a">A:</label>
-<input type="text" id="a" name="a"><br><br>
+<input type="text" id="a" name="a"></input><br><br>
 <label for="b">B:</label>
-<input type="text" id="b" name="b"><br><br>
+<input type="text" id="b" name="b"></input><br><br>
 <input type="submit" value="Do the hard calculation">
 </form>
 </body></html>
@@ -28,9 +28,8 @@ def add():
     b=int(request.args.get("b"))
     # This is the code that makes the request to the other micro-service
     params = {'a':a, 'b': b}
-    r = requests.get(url = "http://localhost:8081/add", params = params)
-    assert r.status_code == 200
-    c = r.text
-    return f"the result is {c}"
+    r = requests.get(url = "http://adder:8081/add", params = params)
+    r.raise_for_status()
+    return f"the result is {r.text}"
 
 app.run(port=8080, host="0.0.0.0")
