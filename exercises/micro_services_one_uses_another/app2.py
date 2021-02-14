@@ -3,7 +3,9 @@
 from flask import Flask
 from flask import request
 import requests
+import sys
 
+ip = sys.argv[1]
 app = Flask("app2")
 
 form="""
@@ -28,7 +30,7 @@ def add():
     b=int(request.args.get("b"))
     # This is the code that makes the request to the other micro-service
     params = {'a':a, 'b': b}
-    r = requests.get(url = "http://adder:8081/add", params = params)
+    r = requests.get(url = f"http://{ip}:8081/add", params = params)
     r.raise_for_status()
     return f"the result is {r.text}"
 

@@ -1,2 +1,3 @@
 #!/bin/sh
-docker run -it hello_scratch_and_c
+image_name=$(basename $PWD)
+docker run -it ${image_name}
