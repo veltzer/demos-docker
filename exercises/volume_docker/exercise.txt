@@ -1,9 +1,3 @@
-
-
-
-
-
-
 - Create a docker volume using "docker volume ..."
 - See the volume using "docker volume ls"
 - Run two containers that manipulate the data on the volume
