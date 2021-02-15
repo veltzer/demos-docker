@@ -10,3 +10,4 @@
 - example of passing environment variables to make images behave differently
 	as containers (--env to the "docker run" command) 
 - docker inspect exercise.
+- exercise with connecting containers with "docker run --link"
