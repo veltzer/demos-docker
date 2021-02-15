@@ -1,9 +1,11 @@
 - do example of complex build process.
-- see logs
+- exercise of postmortem. 
 - enter a running container
 - postmorten of a container
 	docker container ls -a
 	docker exec
 - docker secrets example
-- docker bridge example of connecting two contaners with a bridge
+- docker bridge example of connecting two containers with a bridge
 	but without access from the outside machine.
+- example of passing environment variables to make images behave differently
+	as containers (--env to the "docker run" command) 

@@ -1,4 +1,3 @@
-
 Create a docker image which runs a python app as a non root user.
 
 Prepare, when building the docker image, data for the app.
@@ -12,4 +11,5 @@ hints:
 WORKDIR
 RUN chown
 RUN mkdir
+USER command in Dockerfile
 COPY
