@@ -1,0 +1,5 @@
+- Install docker software on your machine.
+- write a docker file describing how to build
+	your image.
+- build your image using the docker software.
+- run your image using the docket software.

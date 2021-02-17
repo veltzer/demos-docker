@@ -1,0 +1,19 @@
+- like VM but lighter
+- because there are tools to manage many dockers
+	like k8s, and public clouds.
+- determinism.
+- better security.
+- minimum dependencies. 
+- market of docker images (eco system).
+- can run on any linux image (not tailored to any)
+
+What effects applications?
+1. all files on the hd.
+2. hardware.
+3. other applications (processes)
+4. the os and it's drivers.
+5. configuration of os.
+6. registry.
+7. environment variables.
+8. band width.
+9. command line parameter.
