@@ -1,3 +1,2 @@
 FROM centos:latest
-CMD ["/bin/bash"]
-
+CMD "/bin/bash"

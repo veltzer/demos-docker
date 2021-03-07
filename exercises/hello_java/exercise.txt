@@ -1,2 +1,0 @@
-
-Run a java hello world program inside a docker container.
