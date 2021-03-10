@@ -1,0 +1,5 @@
+FROM openjdk:latest
+RUN mkdir /java
+COPY HelloWorld.class /java
+WORKDIR /java
+CMD ["java", "HelloWorld"]
