@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run hello_java
+docker run -it hello_gradle
