@@ -1,5 +1,6 @@
-FROM gradle
+FROM gradle:latest
 RUN mkdir /project
-COPY src build.gradle /project/
+COPY src /project/src
+COPY build.gradle /project
 WORKDIR /project
 CMD gradle build
