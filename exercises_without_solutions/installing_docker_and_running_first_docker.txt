@@ -1,0 +1,16 @@
+Install docker in ubuntu:
+	You need have an ubuntu virtual machine.
+	Install the following packages:
+		docker.io
+		containerd	
+	Install them with:
+		$ sudo apt install docker.io containerd
+	After the installation you can see them running with:
+		$ ps -ef | grep docker
+		$ ps -ef | grep containerd
+
+Lets run some containers...
+	$ docker run --network host nginx
+and now check that you can talk to the nginx that you just installed by pointing
+you browser to:
+	localhost:80
