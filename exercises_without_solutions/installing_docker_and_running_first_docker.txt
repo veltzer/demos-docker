@@ -15,7 +15,7 @@ Adding yourself to the docker group:
 	If you are in the docker group go to the next phase exercise
 	If you are not in the docker then:
 	- add yourself to the docker group using the command:
-		$ sudo adduser [your_user_name] docker
+		$ sudo /usr/sbin/adduser [your_user_name] docker
 	- logout and re-login
 	- run:
 		$ groups
