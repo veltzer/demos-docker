@@ -6,7 +6,7 @@
 	$ docker images
 - run the image, thereby creating a container:
 	$ docker run -it [image_id]
-- explore the contair by lauching bash on it this way:
+- explore the container by lauching bash on it this way:
 	$ docker run -it [image_id] bash
 - see your running containers via:
 	$ docker container ls

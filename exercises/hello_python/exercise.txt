@@ -1,10 +1,15 @@
 
 Create a docker process which prints out
 messages in a loop.
-
-Play around with the technology on which the process is built:
-- python
-- bash
-- C#
-- Java.
-- C (a little difficult)
+Use python as the language.
+Remember to write a "Dockerfile" to describe how to build your image.
+Remember to base your image on a python image from docker hub
+	for example:
+	FROM python:3-slim
+Remember to put your application inside the image using the docker "COPY"
+	command.
+Remember to change what the docker image runs using the "CMD" command.
+Remember to build your image using:
+	$ docker build --tag "[your_image_name]:[your_image_version]" .
+Run your image using:
+	$ docker run -it "[your_image_name]"
