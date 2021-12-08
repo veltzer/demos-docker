@@ -2,7 +2,7 @@
 	(you can find many on the internet)
 	Call the file HelloWorld.java
 
-* second phase: compile yuor HelloWorld.java into HelloWorld.class
+* second phase: compile your HelloWorld.java into HelloWorld.class
 	using a java compiler
 	(you need to install one, it is called javac)
 
