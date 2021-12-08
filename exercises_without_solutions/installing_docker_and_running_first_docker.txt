@@ -29,3 +29,5 @@ Make sure you don't have anything listening on port 80:
 and now check that you can talk to the nginx that you just installed by pointing
 you browser to:
 	localhost:80
+
+* if you dont have 'netstat' then install the 'net-tools' package.
