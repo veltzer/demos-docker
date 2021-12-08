@@ -16,7 +16,8 @@ Adding yourself to the docker group:
 	If you are not in the docker then:
 	- add yourself to the docker group using the command:
 		$ sudo /usr/sbin/adduser [your_user_name] docker
-	- logout and re-login
+	- logout and re-login (in windows virtualization you may need to
+		restart the vm guest)
 	- run:
 		$ groups
 	to check that now you are in the "docker" group.
