@@ -1,12 +1,20 @@
+* first phase: write a "hello world" app in java
+	(you can find many on the internet)
+	Call the file HelloWorld.java
+
+* second phase: compile yuor HelloWorld.java into HelloWorld.class
+	using a java compiler
+	(you need to install one, it is called javac)
+
+* third phase: run your app just to see that it is ok.
+	run it using:
+	java -classpath . HelloWorld
+
 * Write a file called 'Dockerfile' with a FROM statement based
 	on some docker image you find in docker hub which has a java
 	virtual machine.
 
-* Write a small java app (hello world like).
-
-* Compile the app and get a .class file
-
-* Put the app inside the docker image using the COPY docker command
+* Put the class file inside the docker image using the COPY docker command
 
 * Add a docker "CMD" command to run your application.
 
