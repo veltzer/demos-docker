@@ -1,0 +1,8 @@
+- create a docker image with python and an app
+	inside it.
+- the app should be a loop writing to a file with a delay.
+- let the app run for several cycles and kill (CTRL+C)
+- now show that you container is listed in the deceased list:
+	$ docker container ps -a
+- show how to extract the file written by the python app from the
+	corpse of the deceased container.
