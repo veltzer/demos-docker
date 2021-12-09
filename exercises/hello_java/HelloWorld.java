@@ -2,6 +2,16 @@ class HelloWorld
 {
 	public static void main(String args[])
 	{
-		System.out.println("Hello, Java and Docker world");
+		while(true) {
+			System.out.println("Hello from Java inside a Docker image");
+			try
+			{
+				    Thread.sleep(1000);
+			}
+			catch(InterruptedException ex)
+			{
+				    Thread.currentThread().interrupt();
+			}
+		}
 	}
 }
