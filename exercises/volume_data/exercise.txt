@@ -1,7 +1,7 @@
-- Create a docker image with python for ubuntu.
+- Create a docker image with python.
 - Add a small application that runs in a loop and writes some data to the data folder.
 - Use data volumes to make sure that the application writes to a data volume
 	(data volumes are achieved using the --volume command line argument to "docker run")
-- Run the docker images as a container for 20 seconds.
+- Run the docker container for 20 seconds.
 - Kill the container.
-- check the data volume to see that you have data from 20 seconds of operation.
+- Check the data volume to see that you have data from 20 seconds of operation.
