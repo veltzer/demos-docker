@@ -33,6 +33,7 @@ def add():
     b=int(request.args.get("b"))
     # This is the code that makes the request to the other micro-service
     params = {'a':a, 'b': b}
+    # curl "http://localhost:8081/add?a=X&b=Y"
     r = requests.get(url = f"http://{address}:8081/add", params = params)
     r.raise_for_status()
     return f"the result is {r.text}"
