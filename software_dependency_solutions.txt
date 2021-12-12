@@ -1,0 +1,24 @@
+the problems:
+- software depenency
+	How do we make sure that if a software A depends on components N1, N2, ..., Nk
+	those components and not others will be available at runtime
+- software installation
+	How do we make sure that installing software does not expose my computer to malware,
+	spyware, viruses, etc. That software installation do not cause harm to other
+	pieces of software which are already installed on my computer and do not cause
+	harm to the Operating system itself.
+- software isolation
+	How do I make sure that software that I install only has access to data which I want
+	it to have and not to any data no my computer.
+
+The Windows way
+- software provider provides not only the software but all dependencies as well.
+
+advantages:
+- software always has the dependencies it needs
+
+disadvantages:
+- big installations, big disk requirements, big memory requirements, long installation time
+- really bad security. no updates.
+- no software installation system. any software vendor does anything he likes on my computer.
+	Were fucked!
