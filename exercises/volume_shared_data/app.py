@@ -28,8 +28,8 @@ else:
 
 i = 0
 with open(filename, mode) as f:
-    f.seek(0)
     while True:
+        f.seek(0)
         line=None
         for line in f:
             pass
