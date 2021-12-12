@@ -8,3 +8,5 @@ The idea is that every single docker is a "micro service"
 
 * remember that in order to bring both containers up, you must
 differnetiate from each other by the port they listen to.
+
+* bonus: do the exercise with just one docker image. hint: check out the -E flag to docker run.
