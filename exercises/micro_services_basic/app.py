@@ -4,16 +4,11 @@ import sys
 from flask import Flask
 
 port = int(sys.argv[1])
-if port==8000:
-    other_port=8001
-    app_name="app1"
-    other_app="app2"
-else:
-    other_port=8000
-    app_name="app2"
-    other_app="app1"
+other_port = int(sys.argv[2])
+app_name = sys.argv[3]
+other_app = sys.argv[4]
 
-app = Flask("my_app1")
+app = Flask(app_name)
 
 @app.route("/")
 def hello():
