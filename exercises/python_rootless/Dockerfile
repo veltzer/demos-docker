@@ -1,8 +1,8 @@
 FROM python:3-slim
+RUN mkdir /app
 COPY app.py /
-RUN mkdir /user
-COPY data.txt /user
-RUN chown -R 1000:1000 /user
-WORKDIR /user
-USER 1000
+COPY data.txt /app
+RUN chown -R 1200:1200 /app
+USER 1200
+WORKDIR /app
 CMD ["/app.py"]
