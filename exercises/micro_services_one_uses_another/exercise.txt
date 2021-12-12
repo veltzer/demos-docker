@@ -16,8 +16,8 @@
 	Micro service B will run on port 8081 (not to confuse anyone).
 	It will have only one url: add
 	So when I do:
-		wget localhost:8081/add?a=5;b=7
-	I will get the result (12)
+		wget "localhost:8081/add?a=5&b=7"
+	I will get reh result (12)
 
 	Both web services will be writtein in python with the flask framwork.
 	In order for service A to access service B you will need to issue an HTTP

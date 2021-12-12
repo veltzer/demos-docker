@@ -1,4 +1,4 @@
 FROM python:3-slim
-RUN pip install flask requests
+RUN pip install flask
 COPY app1.py /
 CMD ./app1.py
