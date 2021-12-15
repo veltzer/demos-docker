@@ -1,4 +1,3 @@
-
 - Create two dockers which have access to a shared folder on the host.
 	Every x time a docker wakes up and reads the data and writes
 	a new line to it (with append) and a value greater by m.
