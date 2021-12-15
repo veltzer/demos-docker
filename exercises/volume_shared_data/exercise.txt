@@ -1,9 +1,13 @@
-- Create two dockers which have access to a shared folder on the host.
-	Every x time a docker wakes up and reads the data and writes
-	a new line to it (with append) and a value greater by m.
-	The other docker wakes up ever y seconds and increases the value by n.
-	do f.flush on every write to force changed to the storage level.
-- make the two containers be based on the same image.
+- create a python app that receives:
+	- a name
+	- an interval
+	and once every interval opens a constant filename and appends a line
+	to the file with it's name.
+	* find example in the folder of this exercise.
+	See how it runs outside docker.
+- package the app in a docker image.
+- run two containers based on that image and make sure both containers
+	write to *THE SAME FILE* by using the --volume flag to "docker run"
+	and sharing a folder between them.
 - on the host, observe the file changes using:
 	$ tail -f [filename]
-- ecstasy!

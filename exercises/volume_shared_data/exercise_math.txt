@@ -1,0 +1,10 @@
+- Create two dockers which have access to a shared folder on the host.
+	(use --volume)
+	Every x time a docker wakes up and reads the data and writes
+	a new line to it (with append) and a value greater by m (a number)
+	The other docker wakes up ever y seconds and increases the value by n.
+	do f.flush on every write to force changed to the storage level.
+- make the two containers be based on the same image.
+- on the host, observe the file changes using:
+	$ tail -f [filename]
+- ecstasy!
