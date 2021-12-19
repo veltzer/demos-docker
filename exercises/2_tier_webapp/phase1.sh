@@ -3,8 +3,8 @@
 export MYSQL_ROOT_PASSWORD=pass
 if docker container inspect mysql > /dev/null
 then
-	docker kill mysql > /dev/null
-	docker rm mysql > /dev/null
+	docker kill mysql > /dev/null || true
+	docker rm mysql > /dev/null || true
 fi
 docker run --name mysql --detach --network host -e MYSQL_ROOT_PASSWORD mysql:latest > /dev/null
 sleep 10
