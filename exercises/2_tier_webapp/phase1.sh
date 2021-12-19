@@ -1,7 +1,7 @@
 #!/bin/bash -eux
 
 export MYSQL_ROOT_PASSWORD=pass
-if docker inspect mysql > /dev/null
+if docker container inspect mysql > /dev/null
 then
 	docker kill mysql > /dev/null
 	docker rm mysql > /dev/null
