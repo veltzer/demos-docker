@@ -16,3 +16,16 @@ Phase 2
 	volume so that after you kill the app the files uploaded are still there.
 - Upload some files, kill the docker container and see that the files are still there.
 	(in order to demonstrate that your solution is fine...)
+
+
+Phase 3
+=======
+- Install minikube on your linux machine.
+	It must be a real linux machine with enough RAM (at least 4 gig but maybe more).
+	It must not be a WSL type windows system.
+	https://phoenixnap.com/kb/install-minikube-on-ubuntu
+	https://minikube.sigs.k8s.io/docs/start
+- Run minikube.
+- Create a deployment file for your container (app.py) and deploy your newly created app.
+	At first do it simply with no stateful storage.
+- Second stage: add stateful storage to the k8s installation.
