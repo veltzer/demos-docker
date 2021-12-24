@@ -26,6 +26,7 @@ Phase 3
 	https://phoenixnap.com/kb/install-minikube-on-ubuntu
 	https://minikube.sigs.k8s.io/docs/start
 - Run minikube.
-- Create a deployment file for your container (app.py) and deploy your newly created app.
+- Create a deployment file for your container (app.yaml) and deploy your newly created app.
 	At first do it simply with no stateful storage.
+	relicas = 1 in our case (we don't need replicas for this exercise)
 - Second stage: add stateful storage to the k8s installation.
