@@ -8,7 +8,7 @@ Phase 1:
 
 Phase 2:
 
-* Write a python script [without docker] that connect to the database and pull data out of the data and print iton screen
+* Write a python script [without docker] that connects to the database and pulls data out of it and print it to screen
 
 Phase 3:
 
