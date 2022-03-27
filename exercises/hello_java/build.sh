@@ -1,3 +1,4 @@
 #!/bin/sh
 javac HelloWorld.java
-docker build --tag hello_java:latest .
+image_name=$(basename $PWD)
+docker build --tag "${image_name}:latest" .

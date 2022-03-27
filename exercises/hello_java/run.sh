@@ -1,2 +1,3 @@
 #!/bin/sh
-docker run hello_java
+image_name=$(basename $PWD)
+docker run -it "${image_name}"
