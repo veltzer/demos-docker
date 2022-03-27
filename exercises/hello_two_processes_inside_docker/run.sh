@@ -1,2 +1,3 @@
 #!/bin/sh
-docker run -it hello_two_processes_inside_docker
+image_name=$(basename $PWD)
+docker run -it "${image_name}"
