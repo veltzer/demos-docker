@@ -8,3 +8,4 @@ RUN chown -R 2020:2020 /home/foo
 WORKDIR /home/foo
 USER 2020
 CMD ["./app.sh"]
+# CMD ["/home/foo/app.sh"]

@@ -6,6 +6,8 @@
 post mortem methods:
 - show that you container is listed in the deceased list:
 	$ docker container ps -a
+	or
+	$ docker ps -a
 - show how to extract the file written by the python app from the
 	corpse of the deceased container.
 	hint: use docker cp
