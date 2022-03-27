@@ -6,4 +6,4 @@ d={
         "Mark": "Veltzer",
         "Doron": "Veltzer",
 }
-pyvardump.dump(d)
+pyvardump.dump.dump_print(d)

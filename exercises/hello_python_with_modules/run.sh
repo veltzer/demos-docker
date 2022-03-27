@@ -1,2 +1,3 @@
 #!/bin/sh
-docker run -it hello_python_with_modules
+image_name=$(basename $PWD)
+docker run -it "${image_name}"
