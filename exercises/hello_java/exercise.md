@@ -1,4 +1,4 @@
-* first phase: write a "hello world" app in java
+* Write a "hello world" app in java
 	(you can find many on the internet)
 	Call the file HelloWorld.java
 
@@ -13,7 +13,7 @@
 
 	a `HelloWorld.class` file will be created.
 
-* third phase: run your app just to see that it is ok.
+* Run your app just to see that it is ok.
 	run it using:
 	`$ java HelloWorld`
 
