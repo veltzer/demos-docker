@@ -1,3 +1,3 @@
 #!/bin/sh
 image_name=$(basename $PWD)
-docker run -it "${image_name}"
+docker run --log-driver json-file "${image_name}"
