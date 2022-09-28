@@ -1,1 +1,1 @@
-Create a node js app running inside a docker image
+Create a node js docker images and run it inside a docker container.
