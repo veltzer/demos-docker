@@ -8,8 +8,10 @@
 
 * Compile your `HelloWorld.java into `HelloWorld.class`
 	using a java compiler
-	`$ javac HelloWorld.java`
-	`HelloWorld.class` file will be created.
+
+`$ javac HelloWorld.java`
+
+	a `HelloWorld.class` file will be created.
 
 * third phase: run your app just to see that it is ok.
 	run it using:
