@@ -17,7 +17,7 @@
 	run it using:
 	`$ java HelloWorld`
 
-* Write a file called 'Dockerfile' with a FROM statement based
+* Write a file called `Dockerfile` with a FROM statement based
 	on some docker image you find in docker hub which has a java
 	virtual machine.
 
