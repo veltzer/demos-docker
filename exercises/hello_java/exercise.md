@@ -9,7 +9,7 @@
 * Compile your `HelloWorld.java into `HelloWorld.class`
 	using a java compiler
 
-`$ javac HelloWorld.java`
+	`$ javac HelloWorld.java`
 
 	a `HelloWorld.class` file will be created.
 
