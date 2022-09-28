@@ -4,11 +4,14 @@
 
 * second phase: compile your HelloWorld.java into HelloWorld.class
 	using a java compiler
+	$ javac HelloWorld.java
+	a "HelloWorld.class" file will be created.
 	(you need to install one, it is called javac)
+	Most likely you need the package 'openjdk-17-jdk'
 
 * third phase: run your app just to see that it is ok.
 	run it using:
-	java -classpath . HelloWorld
+	$ java HelloWorld
 
 * Write a file called 'Dockerfile' with a FROM statement based
 	on some docker image you find in docker hub which has a java
@@ -25,4 +28,4 @@
 	$ docker images
 
 $ Run your container with:
-	$ docker run -it java_app:latest 
+	$ docker run java_app:latest 

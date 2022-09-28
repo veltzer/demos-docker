@@ -1,3 +1,3 @@
 FROM openjdk:latest
-COPY HelloWorld.class /
-CMD ["java", "HelloWorld"]
+COPY HelloWorldSimple.class /
+CMD ["java", "HelloWorldSimple"]
