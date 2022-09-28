@@ -2,13 +2,14 @@
 	(you can find many on the internet)
 	Call the file HelloWorld.java
 
-* second phase: compile your HelloWorld.java into HelloWorld.class
-	using a java compiler
-	$ javac HelloWorld.java
-	a "HelloWorld.class" file will be created.
-	(you need to install one, it is called javac)
-	Most likely you need the package 'openjdk-17-jdk'
+* Install a java compiler `javac`.
+	Most likely you need the package `openjdk-17-jdk`
 	`$ sudo apt install openjdk-17-jdk`
+
+* Compile your `HelloWorld.java into `HelloWorld.class`
+	using a java compiler
+	`$ javac HelloWorld.java`
+	a `HelloWorld.class` file will be created.
 
 * third phase: run your app just to see that it is ok.
 	run it using:
