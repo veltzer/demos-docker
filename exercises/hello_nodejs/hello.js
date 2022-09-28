@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-const express = require('express')
-const app = express()
-const port = 3000
-
-app.get('/', (req, res) => {
-  res.send('Hello World from inside docker container!')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+var http = require('http');
+const port = 8000
+ 
+http.createServer(
+	function (request, response) {
+		response.writeHead(200, {'Content-Type': 'text/plain'});
+		response.end('Hello World from node.js\n');
+	}
+).listen(port);
+	 
+console.log(`Contact me at http://localhost:${port}`)

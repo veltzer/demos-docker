@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
 var http = require('http');
+const port = 8000
  
 http.createServer(
 	function (request, response) {
 		response.writeHead(200, {'Content-Type': 'text/plain'});
 		response.end('Hello World from node.js\n');
 	}
-).listen(8000);
+).listen(port);
 	 
-console.log('Server running at http://localhost:8000/');
+console.log(`Contact me at http://localhost:${port}`)

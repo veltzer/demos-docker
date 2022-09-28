@@ -1,3 +1,3 @@
 #!/bin/sh
 image_name=$(basename $PWD)
-docker run -p 3000:3000 "${image_name}"
+docker run -p 8000:8000 "${image_name}"
