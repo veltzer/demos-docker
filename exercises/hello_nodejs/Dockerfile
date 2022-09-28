@@ -1,3 +1,5 @@
 FROM node:latest
-COPY hello.js /
-CMD ["./hello.js"]
+WORKDIR /app
+COPY hello.js /app
+RUN npm install express
+CMD ["hello.js"]
