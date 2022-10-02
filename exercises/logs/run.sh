@@ -1,3 +1,4 @@
 #!/bin/sh
 image_name=$(basename $PWD)
-docker run --log-driver json-file "${image_name}"
+# --log-driver json-file is the default
+docker run --detach "${image_name}"

@@ -1,0 +1,7 @@
+When you run a containerized python its standard output is not flushed on every print, unlike
+when you run it regularly on a terminal.
+
+If you want to see your logs live you need to either:
+- fix it so the output will be flushed on newlines (sys.stdout.line_buffering=True)
+or
+- flush on every print.
