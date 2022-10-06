@@ -9,7 +9,7 @@ if len(sys.argv) == 2:
     address = sys.argv[1]
 else:
     address = "localhost"
-app = Flask("app2")
+app = Flask("app_a")
 
 form="""
 <html><body>

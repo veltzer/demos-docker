@@ -3,7 +3,7 @@
 from flask import Flask
 from flask import request
 
-app = Flask("app1")
+app = Flask("app_b")
 
 @app.route("/add")
 def add():

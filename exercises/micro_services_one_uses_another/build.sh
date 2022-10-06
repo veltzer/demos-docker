@@ -1,3 +1,3 @@
 #!/bin/bash -e
-docker build --tag app1:latest --file Dockerfile1 .
-docker build --tag app2:latest --file Dockerfile2 .
+docker build --tag app_a:latest --file Dockerfile.a .
+docker build --tag app_b:latest --file Dockerfile.b .
