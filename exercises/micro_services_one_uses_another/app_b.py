@@ -1,14 +1,13 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 
-from flask import Flask
-from flask import request
+import flask
 
-app = Flask("app_b")
+app = flask.Flask("app_b")
 
 @app.route("/add")
 def add():
-    a=int(request.args.get("a"))
-    b=int(request.args.get("b"))
+    a=int(flask.request.args.get("a"))
+    b=int(flask.request.args.get("b"))
     return str(a+b)
 
 app.run(port=8081, host="0.0.0.0")

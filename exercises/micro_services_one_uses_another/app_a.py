@@ -1,7 +1,6 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 
-from flask import Flask
-from flask import request
+import flask
 import requests
 import sys
 
@@ -9,7 +8,7 @@ if len(sys.argv) == 2:
     address = sys.argv[1]
 else:
     address = "localhost"
-app = Flask("app_a")
+app = flask.Flask("app_a")
 
 form="""
 <html><body>
@@ -29,8 +28,8 @@ def all():
 
 @app.route("/add")
 def add():
-    a=int(request.args.get("a"))
-    b=int(request.args.get("b"))
+    a=int(flask.request.args.get("a"))
+    b=int(flask.request.args.get("b"))
     # This is the code that makes the request to the other micro-service
     params = {'a':a, 'b': b}
     # curl "http://localhost:8081/add?a=X&b=Y"
