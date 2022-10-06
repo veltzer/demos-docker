@@ -1,6 +1,3 @@
-FROM ubuntu:latest
-RUN apt-get -qy update
-RUN apt-get -qy dist-upgrade
-RUN apt-get install -qy python3
+FROM python:3-alpine
 COPY app.py /app.py
 CMD ["/app.py"]
