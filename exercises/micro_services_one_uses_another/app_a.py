@@ -8,6 +8,7 @@ if len(sys.argv) == 2:
     address = sys.argv[1]
 else:
     address = "localhost"
+
 app = flask.Flask("app_a")
 
 form="""
@@ -33,8 +34,8 @@ def add():
     # This is the code that makes the request to the other micro-service
     params = {'a':a, 'b': b}
     # curl "http://localhost:8081/add?a=X&b=Y"
-    r = requests.get(url = f"http://{address}:8081/add", params = params)
-    r.raise_for_status()
-    return f"the result is {r.text}"
+    response = requests.get(url = f"http://{address}:8081/add", params = params)
+    response.raise_for_status()
+    return f"the result is {response.text}"
 
 app.run(port=8080, host="0.0.0.0")

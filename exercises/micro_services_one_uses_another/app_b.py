@@ -10,4 +10,9 @@ def add():
     b=int(flask.request.args.get("b"))
     return str(a+b)
 
+
+@app.route("/is_bibi_back")
+def bibi():
+    return "yes!"
+
 app.run(port=8081, host="0.0.0.0")

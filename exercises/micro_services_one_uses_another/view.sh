@@ -1,2 +1,2 @@
 #!/bin/bash
-lynx http://localhost:8080/
+lynx http://localhost:8080
