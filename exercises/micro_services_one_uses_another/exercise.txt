@@ -1,28 +1,34 @@
-	Create a micro-service type solution using docker
+Create a micro-service type solution using docker
 
-	Micro service A will be exposed to the outside world using port 8080
-	(8080 is open in your AWS machines)
-	When going to url "index.html" in micro service A you will be presented with a web page
-	with the following content:
-			Enter a: ____7____
-			Enter b: ____5____
-			CalculateButton
-	use an HTML form for this.
-	When pressing the button Micro service A will receive the value for a and b
-	and create a request for Micro service B which will respond with the sum
-	of a and b.
-	The micro service A will show a weg page of the following format:
-			The result is: 12
-	Micro service B will run on port 8081 (not to confuse anyone).
-	It will have only one url: add
-	So when I do:
-		wget "localhost:8081/add?a=5&b=7"
-	I will get reh result (12)
+Micro service A will be exposed to the outside world using port 8080
+(8080 is open in your AWS machines)
+When going to url "index.html" in micro service A you will be presented with a web page
+with the following content:
+		Enter a: ____7____
+		Enter b: ____5____
+		CalculateButton
+use an HTML form for this.
+When pressing the button Micro service A will receive the value for a and b
+and create a request for Micro service B which will respond with the sum
+of a and b.
+The micro service A will show a weg page of the following format:
+		The result is: 12
+Micro service B will run on port 8081 (not to confuse anyone).
+It will have only one url: add
+So when I do:
+	wget "localhost:8081/add?a=5&b=7"
+I will get reh result (12)
 
-	Both web services will be writtein in python with the flask framwork.
-	In order for service A to access service B you will need to issue an HTTP
-	request from A to B. You will do this using the "requests" python library.
-	Make sure you have it in your docker image using "pip install requests"
+Dependencies
+============
+Both web services will be writtein in python with the "flask" framwork.
+So make sure you install the "flask" package in both micro-services.
 
-	Work slowly! First do only service B and test it on it's own.
-	Only then add service A.
+In order for service A to access service B you will need to issue an HTTP
+request from A to B. You will do this using the "requests" python library.
+Make sure you have it in your docker image A using "pip install requests"
+
+Advice
+======
+Work slowly! First do only service B and test it on it's own.
+Only then add service A.
