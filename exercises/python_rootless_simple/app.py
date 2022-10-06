@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
-import time
-import sys
+import os
 
-i = 0
-while True:
-    print(f"hello from python inside docker! ({i})")
-    time.sleep(1)
-    sys.stdout.flush()
-    i=i+1
+print(f"getuid is {os.getuid()}...")
+print(f"geteuid is {os.geteuid()}...")
+
+try:
+	with open("textfile.txt", "w") as stream:
+		stream.write("hello, world!\n")
+except:
+	print("yes, I got an error because I cant write to the disk")

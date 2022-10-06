@@ -1,4 +1,4 @@
-FROM python:3-slim
+FROM python:3-alpine
 RUN mkdir /app
 COPY app.py /
 COPY data.txt /app

@@ -3,9 +3,6 @@
 import time
 import sys
 
-i = 0
-while True:
-    print("hello from python inside docker! ({})".format(i))
-    time.sleep(5)
-    sys.stdout.flush()
-    i=i+1
+for i in range(5):
+    print(f"hello from python inside docker! ({i})")
+    time.sleep(1)
