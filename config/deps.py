@@ -1,3 +1,3 @@
 packages=[
-    'bash-static',
+    "bash-static",
 ]
