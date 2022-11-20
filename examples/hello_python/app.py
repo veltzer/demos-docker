@@ -9,3 +9,5 @@ while True:
     sys.stdout.flush()
     time.sleep(5)
     i=i+1
+    if i==4:
+        raise ValueError("Help! I'm crashing...")
