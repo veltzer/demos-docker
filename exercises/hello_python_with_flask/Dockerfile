@@ -1,4 +1,6 @@
 FROM python:3-alpine
 RUN pip install flask
-COPY app.py /
-CMD ["/app.py"]
+RUN mkdir app
+COPY app.py /app
+WORKDIR app
+CMD ["./app.py"]
