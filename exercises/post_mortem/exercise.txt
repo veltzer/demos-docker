@@ -4,7 +4,7 @@
 - let the app run for several cycles and kill (CTRL+C)
 
 post mortem methods:
-- show that you container is listed in the deceased list:
+- show that your container is listed in the deceased list:
 	$ docker container ps -a
 	or
 	$ docker ps -a
