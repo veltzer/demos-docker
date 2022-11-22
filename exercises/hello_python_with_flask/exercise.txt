@@ -7,6 +7,6 @@
 	$ pip install flask
 - you will need to make sure your port 8080 is open and exposed to the outside
 	work.
-	* hint: docker run --network
+	* hint: docker run --network ... or docker run -p ...
 - access you webserver via:
 	http://[your_ip]:8080/
