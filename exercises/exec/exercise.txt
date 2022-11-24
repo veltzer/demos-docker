@@ -1,4 +1,3 @@
-
 Create a python image with your own app that runs forever.
 Use "docker exec" to enter the container AT RUNTIME and investigate.
 

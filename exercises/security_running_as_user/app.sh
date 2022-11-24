@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-while true
-do
-	echo "I'm still here"
-	sleep 2
-done
+id
+whoami
+echo "UID is $UID"
+echo "EUID is $EUID"
