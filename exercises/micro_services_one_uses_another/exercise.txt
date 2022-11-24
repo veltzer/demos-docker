@@ -20,7 +20,7 @@ You will get the result (12)
 
 Dependencies
 ============
-Both web services will be writtein in python with the "flask" framework.
+Both web services will be written in python with the "flask" framework.
 So make sure you install the "flask" package in both micro-services.
 
 In order for service A to access service B you will need to issue an HTTP
