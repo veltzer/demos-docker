@@ -1,0 +1,22 @@
+Stages in creating a docker image:
+
+1. Create a folder where you will put all the ingredients for the new docker image.
+2. Put all the software that you want to package in that folder (and only what you
+	need, nothing more!).
+3. Create a file called 'Dockerfile' (you can call it by another name but try to
+	stick to the convention).
+	This Dockerfile will have the instructions about how to create the docker
+	image.
+	This file has language of its own.
+4. Run (from the folder you created):
+	$ docker build --tag [your_tag_name]:[your_version] .
+	* the "." at the end is important, it is the directory used to build
+	the docker image.
+5. if the build in (4) passed then the newly created image is available locally
+	and you can see it with:
+	$ docker images
+
+Why docker images should have everything they need to run and NOTHING MORE!
+1. Performance - we want to run this docker image and so want it to be as small
+	as possible so as not to take too many resources.
+2. Security - the smaller the docker image is the less of an "attack surface" it has.
