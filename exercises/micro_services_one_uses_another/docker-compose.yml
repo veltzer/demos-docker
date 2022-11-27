@@ -1,6 +1,4 @@
 services:
-  app_b:
-    image: app_b
   app_a:
     image: app_a
     ports:
@@ -9,3 +7,5 @@ services:
       - app_b
     links:
       - "app_b:app_b"
+  app_b:
+    image: app_b
