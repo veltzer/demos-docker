@@ -8,6 +8,8 @@ if len(sys.argv) == 2:
     address = sys.argv[1]
 else:
     address = "localhost"
+    address = "172.17.0.2"
+    address = "app_b"
 
 app = flask.Flask("app_a")
 

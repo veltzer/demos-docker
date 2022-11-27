@@ -1,0 +1,11 @@
+services:
+  app_b:
+    image: app_b
+  app_a:
+    image: app_a
+    ports:
+      - "8080:8080"
+    depends_on:
+      - app_b
+    links:
+      - "app_b:app_b"
