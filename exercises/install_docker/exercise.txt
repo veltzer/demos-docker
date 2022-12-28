@@ -12,13 +12,13 @@ Install docker in ubuntu:
 Adding yourself to the docker group:
 	Check if you are in the docker group using the command:
 	 	$ groups
-	If you are in the docker group go to the next phase exercise
-	If you are not in the docker then:
+	If you are in the docker group go to the next phase of the exercise
+	If you are not in the docker group then:
 	- add yourself to the docker group using the command:
 		$ sudo /usr/sbin/adduser [your_user_name] docker
 	- logout and re-login (in windows virtualization you may need to
 		restart the vm guest)
-	- run:
+	- after re-login or re-start run:
 		$ groups
 	to check that now you are in the "docker" group.
 
