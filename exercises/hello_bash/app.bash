@@ -2,9 +2,9 @@
 
 let i=0
 
-while [[ true ]]
+while true
 do
 	echo "hello, bash ($i)"
-	sleep 5
+	sleep 1
 	let "i=i+1"
 done
