@@ -1,2 +1,13 @@
 #!/usr/bin/env node
-console.log('Hello from JavaScript running inside a docker container!');
+
+const express = require('express')
+const app = express()
+const port = 8000
+
+app.get('/', (req, res) => {
+  res.send('Hello World from javascript inside docker container!')
+})
+
+app.listen(port, () => {
+  console.log(`Contact me at http://localhost:${port}`)
+})

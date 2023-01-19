@@ -1,8 +1,8 @@
 FROM ubuntu:latest
-RUN useradd user --uid 1000
-RUN mkdir /home/user
-COPY app.sh /home/user
-RUN chown -R user:user /home/user
-USER user
-WORKDIR /home/user
+RUN useradd mark
+RUN mkdir /home/mark
+COPY app.sh /home/mark
+RUN chown -R mark:mark /home/mark
+USER mark
+WORKDIR /home/mark
 CMD ["./app.sh"]

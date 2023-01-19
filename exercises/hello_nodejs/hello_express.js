@@ -5,7 +5,7 @@ const app = express()
 const port = 8000
 
 app.get('/', (req, res) => {
-  res.send('Hello World from javascript inside docker container!')
+  res.send('Hello World from express javascript server inside docker container!')
 })
 
 app.listen(port, () => {
