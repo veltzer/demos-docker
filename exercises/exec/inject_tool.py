@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+"""
+This script currently does not work.
+get ideas from:
+    - https://unix.stackexchange.com/questions/46478/join-the-executable-and-all-its-libraries
+"""
+
 import sys
 import subprocess
 
