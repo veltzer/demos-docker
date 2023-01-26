@@ -4,6 +4,8 @@
 This script currently does not work.
 get ideas from:
     - https://unix.stackexchange.com/questions/46478/join-the-executable-and-all-its-libraries
+    - https://github.com/eliben/pyelftools
+    - https://stackoverflow.com/questions/73126729/can-i-statically-link-a-dynamically-linked-executable
 """
 
 import sys
