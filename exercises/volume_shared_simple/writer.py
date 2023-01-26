@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
 import time
+import sys
+
+filename = sys.argv[1]
 
 i=0
-with open("/data/data.txt", "w") as f:
+with open(filename, "w") as f:
     while True:
         f.write(f"{i}\n")
         f.flush()

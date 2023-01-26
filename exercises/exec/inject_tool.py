@@ -14,8 +14,8 @@ for line in output.split("\n"):
         continue
     lib=line.split("=>")[1].strip().split(" ")[0]
     # print(lib)
+    # FIXME: create the path to 'lib' before copying it over!
     subprocess.check_call([
-        "echo",
         "docker",
         "cp",
         "-L",
@@ -23,7 +23,6 @@ for line in output.split("\n"):
         f"{container}:{lib}",
     ])
 subprocess.check_call([
-    "echo",
     "docker",
     "cp",
     "-L",

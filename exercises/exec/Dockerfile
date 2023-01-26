@@ -1,3 +1,6 @@
-FROM python:3-slim
-COPY write_to_disk.py /
-CMD ["/write_to_disk.py"]
+# FROM python:3-slim
+FROM ubuntu:latest
+COPY app.py /
+RUN apt-get update -y
+RUN apt-get install -y python3
+CMD ["/app.py"]
