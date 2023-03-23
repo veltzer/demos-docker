@@ -1,5 +1,5 @@
 Install docker in ubuntu:
-	You need have an ubuntu virtual machine.
+	You need to have an ubuntu virtual machine.
 	Install the following packages:
 		docker.io
 		containerd	
