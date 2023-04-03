@@ -2,9 +2,10 @@
 
 import time
 
-i=0
-while True:
-    print
-    print(f"hello {i}...")
-    time.sleep(1)
-    i+=1
+with open("output.txt", "w") as f:
+    i=0
+    while True:
+        f.write(f"hello {i}...\n")
+        f.flush()
+        time.sleep(1)
+        i+=1
