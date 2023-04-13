@@ -6,4 +6,4 @@
 docker network rm br1 || true
 docker network create --driver=bridge br1
 docker run --detach -p 8080:8080 --network br1 --name app_a app_a
-docker run --name app_b --detach --network br1 --name app_b app_b
+docker run --detach --network br1 --name app_b app_b
