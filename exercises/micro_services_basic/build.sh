@@ -1,2 +1,7 @@
 #!/bin/bash -e
-docker build --tag app .
+if [ -x ./before_build.sh ]
+then
+	./before_build.sh
+fi
+image_name=$(basename "${PWD}")
+docker build --tag "${image_name}" .

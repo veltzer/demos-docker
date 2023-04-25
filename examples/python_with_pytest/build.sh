@@ -1,2 +1,3 @@
-#!/bin/sh
-docker build --tag python_with_pytest .
+#!/bin/bash -e
+image_name=$(basename "${PWD}")
+docker build --tag "${image_name}" .
