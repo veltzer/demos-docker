@@ -4,4 +4,4 @@ then
 	./before_build.sh
 fi
 image_name=$(basename $PWD)
-docker build --tag "${image_name}:latest" .
+docker build --tag "${image_name}" .

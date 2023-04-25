@@ -1,2 +1,2 @@
 #!/bin/bash -e
-docker build --tag app:latest .
+docker build --tag app .

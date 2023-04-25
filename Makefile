@@ -64,10 +64,10 @@ clean_hard:
 
 .PHONY: check
 check:
-	$(info doing [$@])
-	# git grep latest -- **/Dockerfile
-	git grep -l latest -- **/*.sh
-	# git grep latest
+	$(Q)git grep -l latest -- **/*.sh || true
+# $(info doing [$@])
+# git grep latest -- **/Dockerfile
+# git grep latest
 
 ############
 # patterns #
