@@ -13,7 +13,7 @@ else
 fi
 
 # now lets see that we can write data to a file...
-while [[ true ]]
+while true
 do
 	echo "I'm still running and my id is $UID..."
 	echo "some more data" >> datafile.txt
