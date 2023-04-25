@@ -3,7 +3,7 @@
 	like k8s, and public clouds.
 - determinism.
 - better security.
-- minimum dependencies. 
+- minimum dependencies.
 - market of docker images (eco system).
 - can run on any linux image (not tailored to any)
 

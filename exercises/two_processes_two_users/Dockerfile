@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu
 RUN adduser app1
 RUN adduser app2
 COPY app1.bash /home/app1

@@ -6,7 +6,7 @@ then
 	docker kill mysql > /dev/null || true
 	docker rm mysql > /dev/null || true
 fi
-docker run --name mysql --detach --network host -e MYSQL_ROOT_PASSWORD mysql:latest > /dev/null
+docker run --name mysql --detach --network host -e MYSQL_ROOT_PASSWORD mysql > /dev/null
 sleep 20
 mysql --defaults-file=mysql.conf --protocol tcp <<FINISH
 CREATE DATABASE foo;

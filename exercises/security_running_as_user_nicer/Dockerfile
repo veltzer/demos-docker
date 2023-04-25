@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu
 RUN useradd mark
 RUN mkdir /home/mark
 COPY app.sh /home/mark

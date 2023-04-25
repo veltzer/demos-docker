@@ -6,7 +6,7 @@ add certificates to docker image
 example of how to allow remote access to a running docker container
 
 - do example of complex build process.
-- exercise of postmortem. 
+- exercise of postmortem.
 - enter a running container
 - postmorten of a container
 	docker container ls -a
@@ -15,6 +15,6 @@ example of how to allow remote access to a running docker container
 - docker bridge example of connecting two containers with a bridge
 	but without access from the outside machine.
 - example of passing environment variables to make images behave differently
-	as containers (--env to the "docker run" command) 
+	as containers (--env to the "docker run" command)
 - docker inspect exercise.
 - exercise with connecting containers with "docker run --link"

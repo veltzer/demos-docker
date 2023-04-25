@@ -1,2 +1,2 @@
-FROM centos:latest
+FROM centos
 CMD "/bin/bash"

@@ -1,4 +1,4 @@
-FROM bash:latest
+FROM bash
 COPY *.bash /
 # COPY app1.bash /
 # COPY app2.bash /

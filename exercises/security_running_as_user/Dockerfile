@@ -1,4 +1,4 @@
-FROM bash:latest
+FROM bash
 # This is the simple example
 # CMD ["/usr/bin/id"]
 # This is the complex example

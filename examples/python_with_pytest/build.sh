@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build --tag python_with_pytest:latest .
+docker build --tag python_with_pytest .

@@ -1,4 +1,4 @@
-FROM bash:latest
+FROM bash
 RUN mkdir /app_folder
 COPY app.sh /app_folder
 RUN chown 1000:1000 /app_folder
