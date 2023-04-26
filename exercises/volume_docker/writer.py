@@ -1,16 +1,19 @@
 #!/usr/bin/python3
 
+"""
+Simple logging application
+"""
+
 import time
-import os.path
 import sys
 
-filename=sys.argv[1]
+FILENAME=sys.argv[1]
 
-with open(filename, "wt") as f:
+with open(FILENAME, "wt", encoding="utf-8") as stream:
     i=0
     while True:
-        f.write(f"i is {i}\n")
-        print("I write another line")
-        f.flush()
+        stream.write(f"i is {i}\n")
+        print("I wrote another line")
+        stream.flush()
         time.sleep(1)
         i+=1

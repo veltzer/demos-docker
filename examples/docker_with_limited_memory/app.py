@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+Application which grows in memory requirements all the time
+"""
+
 import time
 import random
 

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+Simple logging application
+"""
+
 import time
 import sys
 
