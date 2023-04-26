@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+"""
+This is the solution to the third phase of the exercise
+"""
+
 import flask
 import mysql.connector
 
@@ -6,14 +11,15 @@ import mysql.connector
 app = flask.Flask(__name__)
 
 @app.route("/")
-def all():
+def root():
+    """ this will be called for all urls """
     html="<html><body>"
-    db = mysql.connector.connect(user="root", password="pass", database="foo")
-    cursor = db.cursor()
+    database = mysql.connector.connect(user="root", password="pass", database="foo")
+    cursor = database.cursor()
     cursor.execute("SELECT * FROM bar")
     for row in cursor:
         html+=f"<br>{row[0]}</br>"
-    db.close()
+    database.close()
     html+="</body></html>"
     return html
 

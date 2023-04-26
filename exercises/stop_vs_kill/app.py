@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 
+"""
+This app logs and catching the sigterm signal
+"""
+
 import time
 import sys
 import signal
 
-def cleanup(self, *args):
+def cleanup(_self, *_args):
+    """ This function is called on SIGTERM """
     print("doing cleanup...")
     sys.stdout.flush()
     time.sleep(3)
