@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+A simple infinite application that writes to stdout
+"""
+
 import time
 import sys
 

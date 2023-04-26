@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
 
+"""
+Simple web app showing an html with a link
+"""
+
 import sys
 from flask import Flask
 
-port = int(sys.argv[1])
-other_port = int(sys.argv[2])
-app_name = sys.argv[3]
-other_app = sys.argv[4]
+PORT = int(sys.argv[1])
+OTHER_PORT = int(sys.argv[2])
+APP_NAME = sys.argv[3]
+OTHER_APP = sys.argv[4]
 
-app = Flask(app_name)
+app = Flask(APP_NAME)
 
 @app.route("/")
-def hello():
-    return f"this is {app_name}! go to {other_app} using <a href=\"http://localhost:{other_port}\">this</a>"
+def root():
+    """ root url """
+    return f"this is {APP_NAME}! go to {OTHER_APP}\
+            using <a href=\"http://localhost:{OTHER_APP}\">this</a>"
 
-app.run(port=port, host="0.0.0.0")
+app.run(port=PORT, host="0.0.0.0")

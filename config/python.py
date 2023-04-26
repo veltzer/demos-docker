@@ -8,4 +8,5 @@ dev_requires = [
     "pymakehelper",
     "flask",
     "mysql-connector-python",
+    "pyvardump",
 ]
