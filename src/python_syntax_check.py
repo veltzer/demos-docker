@@ -39,7 +39,10 @@ def main():
         check_with = 'python3'
 
     if check_with is None:
-        print(f"{sys.argv[0]}: could not find how to check file [{filename}]", file=sys.stderr)
+        print(
+            f"{sys.argv[0]}: could not find how to check file [{filename}]",
+            file=sys.stderr,
+        )
         sys.exit(1)
 
     # check the syntax

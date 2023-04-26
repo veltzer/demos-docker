@@ -8,6 +8,7 @@ import time
 import sys
 import os
 
+
 def main():
     """ main entry point """
     while True:
@@ -15,5 +16,6 @@ def main():
         sys.stdout.flush()
         time.sleep(1)
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()

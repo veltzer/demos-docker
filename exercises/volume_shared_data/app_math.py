@@ -12,7 +12,7 @@ import os.path
 
 def main():
     """ main entry point """
-    filename="data/data.txt"
+    filename = "data/data.txt"
 
     # no parameters
     # sleep_time=random.randint(2,7)
@@ -29,21 +29,21 @@ def main():
     print("=================================")
 
     if not os.path.isfile(filename):
-        mode="w+t"
+        mode = "w+t"
     else:
-        mode="a+"
+        mode = "a+"
 
     i = 0
     with open(filename, mode, encoding="utf-8") as stream:
         while True:
             stream.seek(0)
-            line=None
+            line = None
             for line in stream:
                 pass
             if line is not None:
                 i = int(line)
             print(f"incrementing by {increment} the value {i}")
-            i+=increment
+            i += increment
             stream.write(f"{i}\n")
             stream.flush()
             print(f"sleeping for {sleep_time}")

@@ -9,4 +9,7 @@ dev_requires = [
     "flask",
     "mysql-connector-python",
     "pyvardump",
+    "mypy",
+    "requests",
+    "types-requests",
 ]

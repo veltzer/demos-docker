@@ -12,4 +12,4 @@ while True:
     print(f"hello from python inside docker! ({i})")
     time.sleep(5)
     sys.stdout.flush()
-    i=i+1
+    i = i+1

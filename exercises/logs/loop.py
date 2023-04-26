@@ -14,11 +14,11 @@ import time
 import sys
 
 print(f"line_buffering is {sys.stdout.line_buffering}...")
-sys.stdout.reconfigure(line_buffering = True)
+# sys.stdout.reconfigure(line_buffering=True)
 print(f"line_buffering is {sys.stdout.line_buffering}...")
-i=0
+i = 0
 while True:
     print(f"i is {i}...")
-    # sys.stdout.flush()
+    sys.stdout.flush()
     time.sleep(1)
-    i+=1
+    i += 1

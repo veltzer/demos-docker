@@ -13,4 +13,4 @@ with open("mylogfile.txt", "w", encoding="utf-8") as stream:
         stream.write(f"i is {i}...\n")
         stream.flush()
         time.sleep(1)
-        i+=1
+        i += 1
