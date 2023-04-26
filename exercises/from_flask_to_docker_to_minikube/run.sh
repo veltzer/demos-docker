@@ -1,6 +1,5 @@
 #!/bin/bash -e
-UID=$(id -u)
-GID=$(id -g)
 image_name=$(basename "${PWD}")
+rm -rf data
 mkdir data
-docker run --user "${UID}:${GID}" --detach --volume "${PWD}/data:/data" --network host "${image_name}"
+docker run --user "${UID}:${UID}" --detach --volume "${PWD}/data:/data" --network host "${image_name}"

@@ -49,4 +49,4 @@ def listdir():
     html.append("</ul></body></html>")
     return "\n".join(html)
 
-app.run()
+app.run(port=8080, host="0.0.0.0")
