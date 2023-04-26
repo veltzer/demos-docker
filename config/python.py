@@ -1,7 +1,7 @@
 """
 python dependencies for this project
 """
-dev_requires = [
+make_requires = [
     "pypitools",
     "black",
     "pylint",
