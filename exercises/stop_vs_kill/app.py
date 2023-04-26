@@ -8,6 +8,7 @@ import time
 import sys
 import signal
 
+
 def cleanup(_self, *_args):
     """ This function is called on SIGTERM """
     print("doing cleanup...")
@@ -17,10 +18,11 @@ def cleanup(_self, *_args):
     sys.stdout.flush()
     sys.exit(0)
 
+
 signal.signal(signal.SIGTERM, cleanup)
 i = 0
 while True:
     print(f"hello from python inside docker! ({i})")
     sys.stdout.flush()
     time.sleep(1)
-    i=i+1
+    i = i+1

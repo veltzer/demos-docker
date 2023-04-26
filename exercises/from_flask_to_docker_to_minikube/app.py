@@ -11,7 +11,7 @@ from flask import request
 # UPLOAD_FOLDER = "/home/mark/upload_data"
 UPLOAD_FOLDER = "/data"
 
-UPLOAD_HTML="""
+UPLOAD_HTML = """
 <html>
     <body>
         <title>Upload new File</title>
@@ -19,7 +19,7 @@ UPLOAD_HTML="""
         <form method="post" enctype="multipart/form-data" action="/upload">
             <input type="file" name="file">
             <input type="submit" value="Upload">
-		</form>
+        </form>
     </body>
 </html>
 """
@@ -27,10 +27,12 @@ UPLOAD_HTML="""
 app = flask.Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
+
 @app.route("/")
 def root():
     """ root html for the site """
     return UPLOAD_HTML
+
 
 @app.route("/upload", methods=["POST"])
 def upload():
@@ -38,6 +40,7 @@ def upload():
     file = request.files["file"]
     file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
     return "<html><body>Your file was uploaded</body></html>"
+
 
 @app.route("/listdir")
 def listdir():
@@ -48,5 +51,6 @@ def listdir():
         html.append(f"<li>{filename}</li>")
     html.append("</ul></body></html>")
     return "\n".join(html)
+
 
 app.run(port=8080, host="0.0.0.0")
