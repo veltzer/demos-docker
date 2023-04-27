@@ -108,7 +108,7 @@ $(ALL_STAMP): out/%.stamp: % .shellcheckrc
 	$(Q)pymakehelper touch_mkdir $@
 $(ALL_SYNTAX): out/%.syntax: %.py
 	$(info doing [$@])
-	$(Q)pycmttools python_syntax_check $<
+	$(Q)pycmdtools python_check_syntax $<
 	$(Q)pymakehelper touch_mkdir $@
 $(ALL_LINT): out/%.lint: %.py
 	$(info doing [$@])
