@@ -10,6 +10,7 @@ make_requires = [
 
     "pymakehelper",
     "pypitools",
+    "pycmdtools",
 
     "black",
 
