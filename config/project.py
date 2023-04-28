@@ -1,6 +1,4 @@
-""" general definitions for this project """
-
-# pylint: disable=invalid-name
+name = "demos-docker"
 description_short = "Demos-docker shows you how to do things with docker"
 keywords = [
     "docker",
