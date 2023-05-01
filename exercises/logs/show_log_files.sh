@@ -4,5 +4,5 @@
 for x in $(docker ps --no-trunc -q)
 do
 	sudo ls -l "/var/lib/docker/containers/${x}/${x}-json.log"
-	docker logs "$x"
+	docker logs "${x}"
 done

@@ -2,5 +2,5 @@
 
 id
 whoami
-echo "UID is $UID"
-echo "EUID is $EUID"
+echo "UID is ${UID}"
+echo "EUID is ${EUID}"

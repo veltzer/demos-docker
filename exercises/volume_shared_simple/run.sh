@@ -1,7 +1,7 @@
 #!/bin/sh
 UID=$(id -u)
 GID=$(id -g)
-image_name=$(basename "$PWD")
+image_name=$(basename "${PWD}")
 if [ ! -d "data" ]
 then
 	mkdir data
