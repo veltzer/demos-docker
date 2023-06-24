@@ -4,12 +4,12 @@
 
 ./main.elf &
 pid=$!
-if wait $pid
+if wait "${pid}"
 then
 	echo "It exited successfully"
 else
 	code=$?
-	echo "It exited with failure ($?)"
+	echo "It exited with failure (${code})"
 	# this works only if you add CAP_SYSLOG capability
 	dmesg
 	# these *** DONT *** work from inside containers by default (without adding software or
