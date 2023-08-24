@@ -1,0 +1,3 @@
+services:
+  some_service:
+    build: compose_folder
