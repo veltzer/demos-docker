@@ -3,6 +3,7 @@ Install docker in ubuntu:
 	Install the following packages:
 		docker.io
 		containerd	
+		docker-buildx
 	Install them with:
 		$ sudo apt install docker.io containerd
 	After the installation you can see them running with:
