@@ -1,7 +1,7 @@
-When you run a containerized python its standard output is not flushed on every print, unlike
+When you run a containerized app (python or not) its standard output is not flushed on every print, unlike
 when you run it regularly on a terminal.
 
-If you want to see your logs live you need to either:
+If you want to see your logs live you need to fix your app so that it flushed.
+In python there are two ways to do it:
 - fix it so the output will be flushed on newlines (sys.stdout.line_buffering=True)
-or
-- flush on every print.
+- flush on every print (sys.stdout.flush())
