@@ -11,8 +11,7 @@ import sys
 
 def main():
     """ main function """
-    folder = sys.argv[1]
-    filename = os.path.join(folder, "data.txt")
+    filename = "/data/data.txt"
 
     if os.path.isfile(filename):
         with open(filename, "rt", encoding="utf-8") as stream:

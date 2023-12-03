@@ -5,5 +5,5 @@
 # we still need to call app_b "app_b" so that app_a will be able to find it.
 docker network rm br1 || true
 docker network create --driver=bridge br1
-docker run --detach -p 8080:8080 --network br1 --name app_a app_a
 docker run --detach --network br1 --name app_b app_b
+docker run --detach -p 8080:8080 --network br1 --name app_a app_a

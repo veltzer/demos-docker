@@ -26,9 +26,9 @@ FORM = """
 if len(sys.argv) == 2:
     ADDRESS = sys.argv[1]
 else:
-    ADDRESS = "172.17.0.2"
-    ADDRESS = "app_b"
-    ADDRESS = "localhost"
+    # ADDRESS = "172.17.0.2" # for debugging
+    ADDRESS = "app_b" # for --network br1 or --link
+    # ADDRESS = "localhost" # for --network=host
 
 app = flask.Flask("app_a")
 
