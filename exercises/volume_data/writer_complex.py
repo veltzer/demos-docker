@@ -6,7 +6,6 @@ This write always continues from where it had left of
 
 import time
 import os.path
-import sys
 
 
 def main():
