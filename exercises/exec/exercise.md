@@ -1,3 +1,5 @@
+# Exec
+
 Create a python image with your own app that runs forever.
 Use "docker exec" to enter the container AT RUNTIME and investigate.
 
@@ -10,4 +12,4 @@ In this case you will not have debugging (bash, ls, ...) in the container and yo
 will have to add them yourself.
 
 try injecting static packages into your container like:
-	bash-static busybox-static
+    `bash-static` `busybox-static`

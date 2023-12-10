@@ -16,7 +16,7 @@ DO_FLAKE8:=1
 # do you want to lint python files using mypy?
 DO_MYPY:=1
 # do you want to run mdl on md files?
-DO_MD_MDL:=0
+DO_MD_MDL:=1
 
 ########
 # code #

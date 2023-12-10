@@ -1,10 +1,4 @@
+# Scratch and Bash Dynamic
 
-Create a docker process which prints out
-messages in a loop.
-
-Play around with the technology on which the process is built:
-- python
-- bash
-- C#
-- Java.
-- C (a little difficult)
+Create a docker image which has nothing in it except a bash which is linked dynamically.
+Demonstrate that it runs

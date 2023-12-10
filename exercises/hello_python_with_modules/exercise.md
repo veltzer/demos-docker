@@ -1,4 +1,5 @@
-Create a python program which uses a module
-which is NOT in the standard python library.
+# Hello Python with Modules
 
-Suggestion: use the module pyvardump.
+Create a python program which uses a module which is NOT in the standard python library.
+
+Suggestion: use the module `pyvardump`

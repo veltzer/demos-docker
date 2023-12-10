@@ -1,3 +1,4 @@
+# Hello Gradle
 
 * Build java software inside docker using gradle
 
@@ -35,6 +36,6 @@ apply plugin: 'java'
 
 * When the container runs, make sure to run
 
-```
+```bash
 gradle build
 ```
