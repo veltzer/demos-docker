@@ -20,4 +20,5 @@ make_requires = [
     "flake8",
     "pyflakes",
     "mypy",
+    "pydmt",
 ]
