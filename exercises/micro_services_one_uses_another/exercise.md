@@ -3,7 +3,7 @@
 Create a micro-service type solution using docker
 
 Micro service A will be exposed to the outside world using port 8080
-When going to url "index.html" in micro service A you will be presented with a web page
+When going to URL "index.html" in micro service A you will be presented with a web page
 with the following content:
         Enter a: ____7____ <- this is a text field
         Enter b: ____5____ <- this is a text field
@@ -12,11 +12,11 @@ use an HTML form for this page.
 When pressing the button Micro service A will receive the value for a and b
 and create a request for Micro service B which will respond with the sum
 of a and b.
-The micro service A will then show a weg page of the following format:
+The micro service A will then show a web page of the following format:
         The result is: 12
 Micro service B will run on port 8081 (in order to not conflict with 8080 which is used by A).
-It will have only one url: /add
-When you access url B with web tools like wget like this:
+It will have only one URL: /add
+When you access URL B with web tools like wget like this:
     `$ wget "localhost:8081/add?a=5&b=7"`
 You will get the result (12)
 

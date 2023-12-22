@@ -1,7 +1,7 @@
 # Install Docker
 
 Install docker in Ubuntu:
-* You need to have an ubuntu virtual machine.
+* You need to have an Ubuntu virtual machine.
 * Install the following packages:
     `docker.io`
     `containerd`
@@ -19,7 +19,7 @@ Adding yourself to the docker group:
 * If you are not in the docker group then:
     * add yourself to the docker group using the command:
         `$ sudo /usr/sbin/adduser [your_user_name] docker`
-    * logout and re-login (in windows virtualization you may need to restart the vm guest)
+    * logout and re-login (in windows virtualization you may need to restart the VM guest)
     * after re-login or re-start run:
         `$ groups`
     and check that now you are in the "docker" group.
@@ -30,6 +30,6 @@ Make sure you don't have anything listening on port 80:
     `$ docker run --network host nginx`
 and now check that you can talk to the nginx that you just installed by pointing
 you browser to:
-    localhost:80
+    `localhost:80
 
-* if you dont have `netstat` then install the `net-tools` package.
+* if you dint have `netstat` then install the `net-tools` package.

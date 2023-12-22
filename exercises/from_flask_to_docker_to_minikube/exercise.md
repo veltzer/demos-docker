@@ -18,13 +18,13 @@
     (in order to demonstrate that your solution is fine...)
 
 ## Phase 3
-* Install minikube on your linux machine.
-    It must be a real linux machine with enough RAM (at least 4 gig but maybe more).
+* Install Minikube on your Linux machine.
+    It must be a real Linux machine with enough RAM (at least 4 gig but maybe more).
     It must not be a WSL type windows system.
     `https://phoenixnap.com/kb/install-minikube-on-ubuntu`
     `https://minikube.sigs.k8s.io/docs/start`
-* Run minikube.
+* Run Minikube.
 * Create a deployment file for your container (app.yaml) and deploy your newly created app.
     At first do it simply with no stateful storage.
-    relicas = 1 in our case (we don't need replicas for this exercise)
+    replicas = 1 in our case (we don't need replicas for this exercise)
 * Second stage: add stateful storage to the k8s installation.

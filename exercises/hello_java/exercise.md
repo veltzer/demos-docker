@@ -15,7 +15,7 @@
 
     a `HelloWorld.class` file will be created.
 
-* Run your app just to see that it is ok.
+* Run your app just to see that it is OK.
     run it using:
     `$ java HelloWorld`
 

@@ -1,12 +1,12 @@
 # Hello Gradle
 
-* Build java software inside docker using gradle
+* Build java software inside docker using Gradle
 
 * Create a docker images based on java on an operating system (and then you need to install java).
 
-* Put gradle inside the docker image you are creating. Use the zip version of installation.
+* Put Gradle inside the docker image you are creating. Use the zip version of installation.
 
-* In the following instructions we are creating a standard hello world Java + gradle project.
+* In the following instructions we are creating a standard hello world Java + Gradle project.
 
 * create a java file called HelloWorld.java residing in a folder structure like so:
 Gradle build folder inside the docker

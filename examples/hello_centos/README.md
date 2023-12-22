@@ -1,3 +1,3 @@
 # Hello CentOS
 
-This is a docker image based on centos
+This is a docker image based on CentOS

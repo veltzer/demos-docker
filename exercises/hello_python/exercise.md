@@ -8,7 +8,7 @@
     python:3-latest -> latest python with of the pythons features
         cons: too fat (around 1 gig)
     python:3-slim -> more slim version version of python
-    python:3-alpine -> the slimest version of python (around 50 megs)
+    python:3-alpine -> the slimmest version of python (around 50 megs)
     in the docker file the first line selects the image that you build on:
     FROM [image_name]
 * Remember to put your application inside the image using the docker "COPY" command.
