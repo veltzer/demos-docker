@@ -16,9 +16,9 @@ def root():
     """ this will be called for all urls """
     html = "<html><body>"
     database = mysql.connector.connect(
-            user="root",
-            password="pass",
-            database="foo",
+        user="root",
+        password="pass",
+        database="foo",
     )
     cursor = database.cursor()
     cursor.execute("SELECT * FROM bar")

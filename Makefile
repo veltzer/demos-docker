@@ -4,13 +4,13 @@
 # do you want to see the commands executed ?
 DO_MKDBG:=0
 # do you want to check bash syntax?
-DO_CHECK_SYNTAX:=1
+DO_SHELLCHECK:=1
 # do you want dependency on the Makefile itself ?
 DO_ALLDEP:=1
 # do you want to check python syntax?
 DO_SYNTAX:=1
 # do you want to lint python files using pylit?
-DO_LINT:=1
+DO_PYLINT:=1
 # do you want to lint python files using flake8?
 DO_FLAKE8:=1
 # do you want to lint python files using mypy?
@@ -40,28 +40,30 @@ ifeq ($(DO_ALLDEP),1)
 endif # DO_ALLDEP
 
 ALL_SH:=$(shell find . -type f -name "*.sh" -and -not -path "./.venv/*" -and -not -path "./config/*" -printf "%P\n")
+ALL_SHELLCHECK:=$(addprefix out/, $(addsuffix .shellcheck, $(ALL_SH)))
+
 ALL_PY:=$(shell find . -type f -name "*.py" -and -not -path "./.venv/*" -and -not -path "./config/*" -printf "%P\n")
 ALL_SYNTAX:=$(addprefix out/,$(addsuffix .syntax, $(basename $(ALL_PY))))
-ALL_LINT:=$(addprefix out/,$(addsuffix .lint, $(basename $(ALL_PY))))
+ALL_PYLINT:=$(addprefix out/,$(addsuffix .pylint, $(basename $(ALL_PY))))
 ALL_FLAKE8:=$(addprefix out/,$(addsuffix .flake8, $(basename $(ALL_PY))))
 ALL_MYPY:=$(addprefix out/,$(addsuffix .mypy, $(basename $(ALL_PY))))
-ALL_STAMP:=$(addprefix out/, $(addsuffix .stamp, $(ALL_SH)))
+
 MD_SRC:=$(shell find examples exercises -type f -and -name "*.md")
 MD_BAS:=$(basename $(MD_SRC))
 MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
 
-ifeq ($(DO_CHECK_SYNTAX),1)
-ALL+=$(ALL_STAMP)
-endif # DO_CHECK_SYNTAX
+ifeq ($(DO_SHELLCHECK),1)
+ALL+=$(ALL_SHELLCHECK)
+endif # DO_SHELLCHECK
 
 ifeq ($(DO_SYNTAX),1)
 ALL+=$(ALL_SYNTAX)
 endif # DO_SYNTAX
 
-ifeq ($(DO_LINT),1)
-ALL+=$(ALL_LINT)
-endif # DO_LINT
+ifeq ($(DO_PYLINT),1)
+ALL+=$(ALL_PYLINT)
+endif # DO_PYLINT
 
 ifeq ($(DO_FLAKE8),1)
 ALL+=$(ALL_FLAKE8)
@@ -90,8 +92,8 @@ all: $(ALL)
 debug:
 	$(info doing [$@])
 	$(info ALL_SH is $(ALL_SH))
+	$(info ALL_SHELLCHECK is $(ALL_SHELLCHECK))
 	$(info ALL_PY is $(ALL_PY))
-	$(info ALL_STAMP is $(ALL_STAMP))
 	$(info MD_SRC is $(MD_SRC))
 	$(info MD_BAS is $(MD_BAS))
 	$(info MD_ASPELL is $(MD_ASPELL))
@@ -126,7 +128,7 @@ $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
 	$(info doing [$@])
 	$(Q)aspell --conf-dir=. --conf=.aspell.conf list < $< | pymakehelper error_on_print sort -u
 	$(Q)pymakehelper touch_mkdir $@
-$(ALL_STAMP): out/%.stamp: % .shellcheckrc
+$(ALL_SHELLCHECK): out/%.shellcheck: % .shellcheckrc
 	$(info doing [$@])
 	$(Q)shellcheck --shell=bash --external-sources --source-path="$$HOME" $<
 	$(Q)pymakehelper touch_mkdir $@
@@ -134,13 +136,13 @@ $(ALL_SYNTAX): out/%.syntax: %.py
 	$(info doing [$@])
 	$(Q)pycmdtools python_check_syntax $<
 	$(Q)pymakehelper touch_mkdir $@
-$(ALL_LINT): out/%.lint: %.py
+$(ALL_PYLINT): out/%.pylint: %.py
 	$(info doing [$@])
-	$(Q)PYTHONPATH=python pylint --reports=n --score=n $<
+	$(Q)python -m pylint --reports=n --score=n $<
 	$(Q)pymakehelper touch_mkdir $@
 $(ALL_FLAKE8): out/%.flake8: %.py
 	$(info doing [$@])
-	$(Q)PYTHONPATH=python flake8 $<
+	$(Q)python -m flake8 $<
 	$(Q)pymakehelper touch_mkdir $@
 $(ALL_MYPY): out/%.mypy: %.py
 	$(info doing [$@])
