@@ -2,7 +2,7 @@
 
 * You will need to run two docker containers: one for Prometheus and one for Grafana.
 
-* You will need to connect them together since Grafana will need access to Promethus data.
+* You will need to connect them together since Grafana will need access to Prometheus data.
 
 * Insert some data into Prometheus.
 
