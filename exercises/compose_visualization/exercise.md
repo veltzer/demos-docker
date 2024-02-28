@@ -7,3 +7,5 @@
 * Insert some data into Prometheus.
 
 * Create a graph in Grafana to show the data from Prometheus.
+
+* You can solve this exercise either with `docker` or `docker-compose`.
