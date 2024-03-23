@@ -12,6 +12,10 @@ services:
     healthcheck:
       disable: true
     volumes:
-      - ./data:/app/data
+      - uptime-kuma-volume:/app/data
     ports:
       - "3001:3001"
+    depends_on:
+      - app
+volumes:
+  uptime-kuma-volume:
