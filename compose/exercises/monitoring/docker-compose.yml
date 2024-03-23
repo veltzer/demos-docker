@@ -1,0 +1,17 @@
+services:
+  app:
+    image: app
+    ports:
+      - "8080:8080"
+    build:
+      context: docker_app
+      dockerfile: Dockerfile
+  uptime-kuma:
+    image: elestio/uptime-kuma:latest
+    restart: always
+    healthcheck:
+      disable: true
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "3001:3001"
