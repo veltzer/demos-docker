@@ -1,0 +1,17 @@
+# THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
+flask
+mysql-connector-python
+pyvardump
+requests
+types-requests
+pymakehelper
+pypitools
+pycmdtools
+black
+pylint
+pytest
+pytest-cov
+flake8
+pyflakes
+mypy
+pydmt
