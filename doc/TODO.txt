@@ -1,9 +1,9 @@
-exercises for git course for sqlink
-===================================
+build all docker images when I do make.
+
 Maven build in docker
 config jvm with docker
 add certificates to docker image
-example of how to allow remote access to a running docker container
+example of how to allow remote ssh access to a running docker container
 
 - do example of complex build process.
 - exercise of postmortem.

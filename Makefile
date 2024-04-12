@@ -19,6 +19,8 @@ DO_MYPY:=1
 DO_MD_MDL:=1
 # do spell check on all?
 DO_MD_ASPELL:=1
+# build docker images?
+DO_DOCKER_BUILD:=1
 
 ########
 # code #
@@ -53,6 +55,9 @@ MD_BAS:=$(basename $(MD_SRC))
 MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
 
+DOCKER_SRC:=$(shell find examples exercises -type f -and -name "Dockerfile")
+DOCKER_BUILD:=$(addprefix out/,$(addsuffix .build,$(DOCKER_SRC)))
+
 ifeq ($(DO_SHELLCHECK),1)
 ALL+=$(ALL_SHELLCHECK)
 endif # DO_SHELLCHECK
@@ -81,6 +86,10 @@ ifeq ($(DO_MD_ASPELL),1)
 ALL+=$(MD_ASPELL)
 endif # DO_MD_ASPELL
 
+ifeq ($(DO_DOCKER_BUILD),1)
+ALL+=$(DOCKER_BUILD)
+endif # DO_DOCKER_BUILD
+
 #########
 # rules #
 #########
@@ -98,6 +107,8 @@ debug:
 	$(info MD_BAS is $(MD_BAS))
 	$(info MD_ASPELL is $(MD_ASPELL))
 	$(info MD_MDL is $(MD_MDL))
+	$(info DOCKER_SRC is $(DOCKER_SRC))
+	$(info DOCKER_BUILD is $(DOCKER_BUILD))
 
 .PHONY: first_line_stats
 first_line_stats:
@@ -124,10 +135,6 @@ check:
 ############
 # patterns #
 ############
-$(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
-	$(info doing [$@])
-	$(Q)aspell --conf-dir=. --conf=.aspell.conf list < $< | pymakehelper error_on_print sort -u
-	$(Q)pymakehelper touch_mkdir $@
 $(ALL_SHELLCHECK): out/%.shellcheck: % .shellcheckrc
 	$(info doing [$@])
 	$(Q)shellcheck --shell=bash --external-sources --source-path="$$HOME" $<
@@ -148,8 +155,16 @@ $(ALL_MYPY): out/%.mypy: %.py
 	$(info doing [$@])
 	$(Q)pymakehelper only_print_on_error mypy $<
 	$(Q)pymakehelper touch_mkdir $@
+$(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
+	$(info doing [$@])
+	$(Q)aspell --conf-dir=. --conf=.aspell.conf list < $< | pymakehelper error_on_print sort -u
+	$(Q)pymakehelper touch_mkdir $@
 $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)GEM_HOME=gems gems/bin/mdl $<
 	$(Q)mkdir -p $(dir $@)
 	$(Q)touch $@
+$(DOCKER_BUILD): out/%.build: %
+	$(info doing [$@])
+	$(Q)cd $$(dirname $<); ../../scripts/build.sh
+	$(Q)pymakehelper touch_mkdir $@
