@@ -1,1 +1,2 @@
 docker images are build now with make
+added option to push all images to docker hub or ghcr.io (github).

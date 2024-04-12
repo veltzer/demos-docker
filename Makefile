@@ -21,6 +21,8 @@ DO_MD_MDL:=1
 DO_MD_ASPELL:=1
 # build docker images?
 DO_DOCKER_BUILD:=1
+# push docker images?
+DO_DOCKER_PUSH:=0
 
 ########
 # code #
@@ -57,6 +59,7 @@ MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
 
 DOCKER_SRC:=$(shell find examples exercises -type f -and -name "Dockerfile")
 DOCKER_BUILD:=$(addprefix out/,$(addsuffix .build,$(DOCKER_SRC)))
+DOCKER_PUSH:=$(addprefix out/,$(addsuffix .push,$(DOCKER_SRC)))
 
 ifeq ($(DO_SHELLCHECK),1)
 ALL+=$(ALL_SHELLCHECK)
@@ -89,6 +92,10 @@ endif # DO_MD_ASPELL
 ifeq ($(DO_DOCKER_BUILD),1)
 ALL+=$(DOCKER_BUILD)
 endif # DO_DOCKER_BUILD
+
+ifeq ($(DO_DOCKER_PUSH),1)
+ALL+=$(DOCKER_PUSH)
+endif # DO_DOCKER_PUSH
 
 #########
 # rules #
@@ -167,4 +174,8 @@ $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 $(DOCKER_BUILD): out/%.build: %
 	$(info doing [$@])
 	$(Q)cd $$(dirname $<); ../../scripts/build.sh
+	$(Q)pymakehelper touch_mkdir $@
+$(DOCKER_PUSH): out/%.push: %
+	$(info doing [$@])
+	$(Q)cd $$(dirname $<); ../../scripts/push.sh
 	$(Q)pymakehelper touch_mkdir $@

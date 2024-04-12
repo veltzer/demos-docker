@@ -1,4 +1,3 @@
-add option to push all images to docker hub or ghcr.io (github).
 
 Maven build in docker
 config jvm with docker
