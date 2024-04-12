@@ -1,4 +1,4 @@
-build all docker images when I do make.
+add option to push all images to docker hub or ghcr.io (github).
 
 Maven build in docker
 config jvm with docker
