@@ -1,9 +1,0 @@
-play around with docker and resources:
-	- memory
-	- cpu
-
-In order to do that you will need to create applications that either consumes
-lots of memory or lots of CPU.
-
-Monitor you consumption of resources either from the host or from within the docker
-using "docker exec"

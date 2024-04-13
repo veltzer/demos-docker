@@ -1,9 +1,0 @@
-Package the `ls` application into a docker container and run it with some
-parameters to show that it works.
-
-Hints:
-- how to run application with parameters in docker:
-	CMD ["/bin/ls", [parameters] ]
-- how do you know what an application depens on?
-	which [appname]
-	ldd [fullpath]
