@@ -116,6 +116,7 @@ debug:
 	$(info MD_MDL is $(MD_MDL))
 	$(info DOCKER_SRC is $(DOCKER_SRC))
 	$(info DOCKER_BUILD is $(DOCKER_BUILD))
+	$(info DOCKER_PUSH is $(DOCKER_PUSH))
 
 .PHONY: first_line_stats
 first_line_stats:
@@ -131,6 +132,11 @@ clean:
 clean_hard:
 	$(info doing [$@])
 	$(Q)git clean -qffxd
+
+.PHONY: clean_push
+clean_push:
+	$(info doing [$@])
+	$(Q)rm -f $(DOCKER_PUSH)
 
 .PHONY: check
 check:
