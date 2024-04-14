@@ -1,1 +1,1 @@
-echo "entering env"
+echo "entering env ${PWD}"

@@ -1,1 +1,1 @@
-echo "exiting env"
+echo "exiting env ${PWD}"
