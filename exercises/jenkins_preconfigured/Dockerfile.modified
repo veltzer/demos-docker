@@ -1,0 +1,17 @@
+FROM jenkins/jenkins:lts
+
+USER root:root
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get install groovy docker.io -y
+
+# Set the default user and password
+ENV JENKINS_USER=admin
+ENV JENKINS_PASS=admin
+# Create the user and set the password
+# RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
+# RUN echo "${JENKINS_USER}:${JENKINS_PASS}" | /usr/local/bin/jenkins-groovy /usr/local/bin/create-user.groovy
+COPY create-user.groovy /usr/local/bin
+USER 1000:1000
+USER root:root
+CMD ["/bin/bash"]
