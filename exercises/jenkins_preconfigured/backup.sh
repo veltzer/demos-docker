@@ -6,6 +6,6 @@ then
 	exit 1
 fi
 
-name=$(docker inspect $1 | jq -r ".[0].Mounts[].Name")
+name=$(docker inspect "$1" | jq -r ".[0].Mounts[].Name")
 docker run --rm -v "${name}:/volume" -v /tmp/backup:/backup alpine tar czf /backup/backup.tar.gz -C /volume .
 cp /tmp/backup/backup.tar.gz .
