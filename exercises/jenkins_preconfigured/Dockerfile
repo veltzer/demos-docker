@@ -15,7 +15,7 @@ ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 ENV JENKINS_USER="admin"
 ENV JENKINS_PASS="admin"
 ENV JENKINS_URL="http://localhost:8080"
-ENV CASC_JENKINS_CONFIG="/usr/share/jenkins/ref/jenkins.yaml"
+ENV CASC_JENKINS_CONFIG="/usr/share/jenkins/ref/config.yaml"
 
 COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/init.groovy
-COPY jenkins.yaml /usr/share/jenkins/ref/jenkins.yaml
+COPY config.yaml /usr/share/jenkins/ref/config.yaml
