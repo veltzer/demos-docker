@@ -1,3 +1,12 @@
 # this is the jenkins configuration
 # You can get it from jenkins if you go to:
 # Manage Jenkins -> Configuration as Code -> {View|Download} Configuration
+jenkins:
+  clouds:
+  - kubernetes:
+      containerCap: 10
+      containerCapStr: "10"
+      jnlpregistry: "fubar"
+      name: "marks-k8s"
+      namespace: "foo"
+      serverUrl: "192.167.45.6"

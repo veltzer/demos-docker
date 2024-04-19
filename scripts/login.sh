@@ -2,8 +2,8 @@
 
 # This script logs in to your container registry
 
-# site="docker.io"
-site="ghcr.io"
+site="docker.io"
+# site="ghcr.io"
 
 # get user and password
 username=$(jq -r ".[\"${site}\"][\"user\"]" ~/.passwords.json)

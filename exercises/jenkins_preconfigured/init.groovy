@@ -14,7 +14,6 @@ def strategy = new FullControlOnceLoggedInAuthorizationStrategy()
 instance.setAuthorizationStrategy(strategy)
 
 jenkinsUrl = System.getenv("JENKINS_URL")
-//instance.setRootUrl(jenkinsUrl)
 def locationConfig = JenkinsLocationConfiguration.get()
 locationConfig.setUrl(jenkinsUrl)
 
