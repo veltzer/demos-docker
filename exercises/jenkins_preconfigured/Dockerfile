@@ -1,6 +1,8 @@
 FROM jenkins/jenkins:latest
 # FROM jenkins/jenkins:lts
 
+# Documentation can be found here: https://github.com/jenkinsci/docker/blob/master/README.md
+
 # the next line does not work because the initiall password is created dynamically
 # RUN rm /var/jenkins_home/secrets/initialAdminPassword
 

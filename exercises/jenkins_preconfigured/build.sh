@@ -1,2 +1,2 @@
 #!/bin/bash -e
-docker buildx build -t jenkins_loaded .
+docker buildx build -t jenkins_preconfigured .
