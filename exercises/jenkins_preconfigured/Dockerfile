@@ -10,7 +10,7 @@ FROM jenkins/jenkins:latest
 # on that system, issuing:
 # $ ls /var/jenkins_home/plugins/*.jpi > plugins.txt
 # and then removing the .jpi suffix of each line
-COPY --chown=jenkins:jenkins plugins.txt /usr/share/jenkins/ref/plugins.txt
+COPY --chown=jenkins:jenkins plugins_docker_k8s_ocean.txt /usr/share/jenkins/ref/plugins.txt
 RUN jenkins-plugin-cli --verbose -f /usr/share/jenkins/ref/plugins.txt
 
 # trying to copy users definitions

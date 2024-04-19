@@ -36,6 +36,8 @@ credentials-binding
 credentials
 dark-theme
 display-url-api
+docker-commons
+docker-workflow
 durable-task
 echarts-api
 email-ext
@@ -65,10 +67,14 @@ jquery3-api
 json-api
 json-path-api
 junit
+kubernetes-client-api
+kubernetes-credentials
+kubernetes
 ldap
 mailer
 matrix-auth
 matrix-project
+metrics
 mina-sshd-api-common
 mina-sshd-api-core
 okhttp-api
