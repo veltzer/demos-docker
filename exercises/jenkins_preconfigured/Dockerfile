@@ -22,3 +22,10 @@ COPY --chown=jenkins:jenkins users /var/jenkins_home/users
 # RUN tar xvf /tmp/backup.tar.gz -C /var/jenkins_home
 # RUN rm /tmp/backup.tar.gz
 # USER jenkins:jenkins
+
+# don't run the setup wizard and have constant user and password
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+ENV JENKINS_USER="admin"
+ENV JENKINS_PASS="admin"
+ENV JENKINS_URL="http://localhost:8080"
+COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/init.groovy
