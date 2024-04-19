@@ -1,2 +1,2 @@
 #!/bin/bash -e
-docker run -it -p 8080:8080 jenkins_preconfigured
+docker run --name jenkins_preconfigured -it -p 8080:8080 jenkins_preconfigured
