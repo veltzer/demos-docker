@@ -1,4 +1,4 @@
-FROM node
+FROM node:latest
 WORKDIR /app
 COPY server.js /app
 COPY package.json /app
