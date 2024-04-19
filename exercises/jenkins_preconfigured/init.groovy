@@ -13,6 +13,12 @@ instance.setSecurityRealm(hudsonRealm)
 def strategy = new FullControlOnceLoggedInAuthorizationStrategy()
 instance.setAuthorizationStrategy(strategy)
 
-instance.setRootUrl(System.getenv("JENKINS_URL"))
+jenkinsUrl = System.getenv("JENKINS_URL")
+//instance.setRootUrl(jenkinsUrl)
+def locationConfig = JenkinsLocationConfiguration.get()
+locationConfig.setUrl(jenkinsUrl)
+
+// Recommended to not run builds on the built-in node
+instance.setNumExecutors(0)
 
 instance.save()
