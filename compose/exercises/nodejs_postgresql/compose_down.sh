@@ -1,3 +1,3 @@
 #!/bin/bash -e
 docker-compose down
-docker volume rm postgres_data
+docker volume rm nodejs_postgresql_postgres_data
