@@ -13,6 +13,11 @@ services:
   adminer:
     image: adminer
     restart: always
+    environment:
+      ADMINER_DATA: purge
+      ADMINER_ROOT: postgres
+      ADMINER_DEFAULT_SERVER: postgres
+      DATABASE_URL: postgresql://postgres:db_password@postgres:5432/postgres
     ports:
       - "8080:8080"
 
@@ -21,7 +26,7 @@ services:
     ports:
       - "3001:3001"
     environment:
-      PGRST_DB_URI: postgres://postgres:db_password@postgres:5432/db_name
+      PGRST_DB_URI: postgres://postgres:db_password@postgres:5432/postgres
       PGRST_OPENAPI_SERVER_PROXY_URI: http://127.0.0.1:3000
     depends_on:
       - postgres
