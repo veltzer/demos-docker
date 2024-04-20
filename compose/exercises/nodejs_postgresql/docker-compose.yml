@@ -1,10 +1,33 @@
 services:
   postgres:
     image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: db_password
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - "postgres-data:/var/lib/postgresql/data"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+    links:
+      - "postgres:db"
+
+  postgrest:
+    image: postgrest/postgrest
+    ports:
+      - "3001:3001"
+    environment:
+      PGRST_DB_URI: postgres://postgres:db_password@postgres:5432/db_name
+      PGRST_OPENAPI_SERVER_PROXY_URI: http://127.0.0.1:3000
+    depends_on:
+      - postgres
+    links:
+      - "postgres:postgres"
 
   node:
     build:
@@ -12,12 +35,12 @@ services:
       dockerfile: Dockerfile
     image: app:latest
     ports:
-      - "8080:8080"
+      - "3000:3000"
     environment:
       DB_HOST: postgres
       DB_USER: postgres
-      DB_PASSWORD: password
-      DB_NAME: dbname
+      DB_PASSWORD: db_password
+      DB_NAME: db_name
     depends_on:
       - postgres
     links:
