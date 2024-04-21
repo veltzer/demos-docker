@@ -61,6 +61,8 @@ services:
       context: app
       dockerfile: Dockerfile
     image: app
+    env_file:
+      - .env
     restart: unless-stopped
     ports:
       - "${env_app_port}:${env_app_port}"
