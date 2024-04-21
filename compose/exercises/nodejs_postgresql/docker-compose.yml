@@ -2,7 +2,7 @@ services:
   # https://github.com/docker-library/docs/blob/master/postgres/README.md
   postgres:
     image: postgres:latest
-    restart: always
+    restart: unless-stopped
     ports:
       - "5432:5432"
     environment:
@@ -10,19 +10,24 @@ services:
     volumes:
       - "postgres_data:/var/lib/postgresql/data"
 
+  # https://github.com/docker-library/docs/tree/master/adminer
   adminer:
     image: adminer
-    restart: always
+    restart: unless-stopped
     environment:
-      ADMINER_DATA: purge
+      # ADMINER_DATA: purge
       ADMINER_ROOT: postgres
       ADMINER_DEFAULT_SERVER: postgres
       DATABASE_URL: postgresql://postgres:db_password@postgres:5432/postgres
     ports:
       - "8080:8080"
+    depends_on:
+      - postgres
 
+  # https://postgrest.org/en/v12/explanations/install.html#docker
   postgrest:
     image: postgrest/postgrest
+    restart: unless-stopped
     ports:
       - "3001:3000"
     environment:

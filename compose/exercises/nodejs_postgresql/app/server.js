@@ -2,11 +2,12 @@
 
 const express = require("express")
 const app = express()
+const port = 3001 
 
 app.get("/", (req, res) => {
   res.send("Hello World from express javascript server inside docker container!")
 })
 
-app.listen(() => {
-  console.log("Contact me at http://localhost")
+app.listen(port, () => {
+  console.log(`Contact me at http://localhost:${port}`)
 })
