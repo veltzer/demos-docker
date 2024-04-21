@@ -4,7 +4,7 @@ services:
     image: postgres
     restart: unless-stopped
     ports:
-      - "${env_postgres_port}:${env_postgres_port}"
+      - "${env_db_port}:${env_db_port}"
     environment:
       POSTGRES_PASSWORD: "${env_db_password}"
     volumes:

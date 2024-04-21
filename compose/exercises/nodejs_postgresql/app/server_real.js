@@ -25,9 +25,8 @@ app.use(cors());
 app.use(express.json());
 
 // Set up Sequelize connection to PostgreSQL
-//const sequelize = new Sequelize("postgres://postgres:db_password@postgres:5432/postgres", {
 const sequelize = new Sequelize(`${env_db_type}://${env_db_user}:${env_db_password}@${env_db_host}:${env_db_port}/${env_db_name}`, {
-  dialect: env_db_dialect 
+  dialect: "${env_db_dialect}"
 });
 
 // Define a model for the "users" table

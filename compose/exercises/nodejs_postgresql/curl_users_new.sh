@@ -1,4 +1,5 @@
 #!/bin/bash -e
+# shellcheck source=compose/exercises/nodejs_postgresql/.env
 source .env
 name=$1
 email=$2
