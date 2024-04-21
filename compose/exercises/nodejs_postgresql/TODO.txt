@@ -1,1 +1,1 @@
-configure postgrest to do rest on the users table.
+make 

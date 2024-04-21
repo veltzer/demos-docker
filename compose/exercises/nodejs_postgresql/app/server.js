@@ -2,7 +2,7 @@
 
 const express = require("express");
 const Sequelize = require("sequelize");
-const cors = require('cors');
+const cors = require("cors");
 
 // Initialize Express app
 const app = express();
