@@ -1,19 +1,19 @@
 services:
   # https://github.com/docker-library/docs/blob/master/postgres/README.md
   postgres:
-    image: postgres:latest
+    image: postgres
     restart: unless-stopped
     ports:
-      - "5432:5432"
+      - "${env_postgres_port}:${env_postgres_port}"
     environment:
-      POSTGRES_PASSWORD: db_password
+      POSTGRES_PASSWORD: "${env_db_password}"
     volumes:
       - "postgres_data:/var/lib/postgresql/data"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
+      interval: "5s"
+      timeout: "5s"
+      retries: "5"
 
   # https://github.com/docker-library/docs/tree/master/adminer
   adminer:
@@ -21,11 +21,11 @@ services:
     restart: unless-stopped
     environment:
       # ADMINER_DATA: purge
-      ADMINER_ROOT: postgres
-      ADMINER_DEFAULT_SERVER: postgres
-      DATABASE_URL: postgresql://postgres:db_password@postgres:5432/postgres
+      # ADMINER_ROOT: postgres
+      # ADMINER_DEFAULT_SERVER: postgres
+      DATABASE_URL: "${env_adminer_db_type}://${env_db_user}:${env_db_password}@${env_db_host}:${env_db_port}/${env_db_name}"
     ports:
-      - "8080:8080"
+      - "${env_adminer_port}:${env_adminer_port}"
     depends_on:
       - postgres
 
@@ -34,14 +34,12 @@ services:
     image: postgrest/postgrest
     restart: unless-stopped
     ports:
-      - "3001:3001"
-    volumes:
-      - ./postgrest.conf:/app/config.ron
+      - "${env_postgrest_port}:${env_postgrest_port}"
     environment:
-      PGRST_DB_URI: postgres://postgres:db_password@postgres:5432/postgres
-      PGRST_SERVER_PORT: 3001
-      # PGRST_OPENAPI_SERVER_PROXY_URI: http://127.0.0.1:3001
-      PGRST_DB_ANON_ROLE: "postgres"
+      PGRST_DB_URI: "${env_db_type}://${env_db_user}:${env_db_password}@${env_db_host}:${env_db_port}/${env_db_name}"
+      PGRST_SERVER_PORT: "${env_postgrest_port}" 
+      PGRST_OPENAPI_SERVER_PROXY_URI: "http://127.0.0.1:${env_postgrest_port}"
+      PGRST_DB_ANON_ROLE: "${env_db_user}"
       PGRST_SERVER_CORS_ALLOWED_ORIGINS: "Y"
     depends_on:
       - postgres
@@ -53,7 +51,7 @@ services:
     ports:
       - "8081:8080"
     environment:
-      API_URL: http://postgrest:3001/
+      API_URL: "http://${env_postgrest_host}:${env_postgrest_port}/"
     depends_on:
       - postgrest
       - postgres
@@ -62,20 +60,10 @@ services:
     build:
       context: app
       dockerfile: Dockerfile
-    image: app:latest
+    image: app
     restart: unless-stopped
-    environment:
-      PORT: "3000"
-      HOST: "localhost"
-      db_type: "postgres"
-      db_dialect: "postgres"
-      db_name: "postgres"
-      db_user: "postgres"
-      db_password: "db_password"
-      db_port: "5432"
-      db_host: "postgres"
     ports:
-      - "3000:3000"
+      - "${env_app_port}:${env_app_port}"
     depends_on:
       postgres:
         condition: service_healthy

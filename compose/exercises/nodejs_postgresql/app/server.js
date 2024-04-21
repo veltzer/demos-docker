@@ -5,8 +5,8 @@ const Sequelize = require("sequelize");
 const cors = require("cors");
 
 // get environment variables
-const env_port = parseInt(process.env.PORT, 10);
-const env_host = process.env.HOST;
+const env_app_port = parseInt(process.env.app_port, 10);
+const env_app_host = process.env.app_host;
 const env_db_type = process.env.db_type;
 const env_db_dialect = process.env.db_dialect;
 const env_db_name = process.env.db_name;
@@ -74,6 +74,6 @@ app.post("/users", async (req, res) => {
 });
 
 // Start the server
-app.listen(env_port, () => {
-  console.log(`Server started on http://localhost:${env_port}`);
+app.listen(env_app_port, () => {
+  console.log(`Server started on http://${env_app_host}:${env_app_port}`);
 });

@@ -1,2 +1,3 @@
 #!/bin/bash -e
-curl http://localhost:3000/users
+source .env
+curl "http://${env_app_access}:${env_app_port}/users"
