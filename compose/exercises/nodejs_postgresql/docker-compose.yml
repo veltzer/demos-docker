@@ -66,6 +66,14 @@ services:
     restart: unless-stopped
     environment:
       PORT: "3000"
+      HOST: "localhost"
+      db_type: "postgres"
+      db_dialect: "postgres"
+      db_name: "postgres"
+      db_user: "postgres"
+      db_password: "db_password"
+      db_port: "5432"
+      db_host: "postgres"
     ports:
       - "3000:3000"
     depends_on:

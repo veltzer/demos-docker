@@ -4,6 +4,17 @@ const express = require("express");
 const Sequelize = require("sequelize");
 const cors = require("cors");
 
+// get environment variables
+const env_port = parseInt(process.env.PORT, 10);
+const env_host = process.env.HOST;
+const env_db_type = process.env.db_type;
+const env_db_dialect = process.env.db_dialect;
+const env_db_name = process.env.db_name;
+const env_db_user = process.env.db_user;
+const env_db_password = process.env.db_password;
+const env_db_port = process.env.db_port;
+const env_db_host = process.env.db_host;
+
 // Initialize Express app
 const app = express();
 
@@ -14,8 +25,9 @@ app.use(cors());
 app.use(express.json());
 
 // Set up Sequelize connection to PostgreSQL
-const sequelize = new Sequelize("postgres://postgres:db_password@postgres:5432/postgres", {
-  dialect: "postgres"
+//const sequelize = new Sequelize("postgres://postgres:db_password@postgres:5432/postgres", {
+const sequelize = new Sequelize(`${env_db_type}://${env_db_user}:${env_db_password}@${env_db_host}:${env_db_port}/${env_db_name}`, {
+  dialect: env_db_dialect 
 });
 
 // Define a model for the "users" table
@@ -62,8 +74,6 @@ app.post("/users", async (req, res) => {
 });
 
 // Start the server
-const portString = process.env.PORT;
-const port = parseInt(portString, 10);
-app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+app.listen(env_port, () => {
+  console.log(`Server started on http://localhost:${env_port}`);
 });
