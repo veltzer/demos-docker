@@ -9,6 +9,11 @@ services:
       POSTGRES_PASSWORD: db_password
     volumes:
       - "postgres_data:/var/lib/postgresql/data"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   # https://github.com/docker-library/docs/tree/master/adminer
   adminer:
@@ -44,7 +49,8 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
 
 volumes:
   postgres_data:
