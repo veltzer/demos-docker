@@ -2,7 +2,7 @@
 
 const express = require("express");
 const Sequelize = require("sequelize");
-var cors = require('cors');
+const cors = require('cors');
 
 // Initialize Express app
 const app = express();
@@ -62,6 +62,8 @@ app.post("/users", async (req, res) => {
 });
 
 // Start the server
-app.listen(3000, () => {
-  console.log("Server started on http://localhost:3000");
+const portString = process.env.PORT;
+const port = parseInt(portString, 10);
+app.listen(port, () => {
+  console.log(`Server started on http://localhost:${port}`);
 });
