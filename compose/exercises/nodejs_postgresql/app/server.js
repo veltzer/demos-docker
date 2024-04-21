@@ -2,9 +2,13 @@
 
 const express = require("express");
 const Sequelize = require("sequelize");
+var cors = require('cors');
 
 // Initialize Express app
 const app = express();
+
+// use CORS
+app.use(cors());
 
 // Parse JSON request bodies
 app.use(express.json());

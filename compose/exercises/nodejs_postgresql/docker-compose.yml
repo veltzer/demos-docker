@@ -38,7 +38,20 @@ services:
     environment:
       PGRST_DB_URI: postgres://postgres:db_password@postgres:5432/postgres
       PGRST_SERVER_PORT: 3001
+      # PGRST_OPENAPI_SERVER_PROXY_URI: http://127.0.0.1:3001
+      # PGRST_SERVER_CORS_ALLOWED_ORIGINS: "Y"
     depends_on:
+      - postgres
+
+  swagger:
+    image: swaggerapi/swagger-ui
+    ports:
+      - "8081:8080"
+    environment:
+      # API_URL: http://postgrest:3001/
+      API_URL: http://node:3000/
+    depends_on:
+      - postgrest
       - postgres
 
   node:
