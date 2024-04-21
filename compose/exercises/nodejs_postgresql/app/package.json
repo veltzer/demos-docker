@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "pg": "latest",
+    "sequelize": "latest"
   }
 }
