@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 // Set up Sequelize connection to PostgreSQL
-const sequelize = new Sequelize("postgres://postgress:db_password@postgres:5432/postgres", {
+const sequelize = new Sequelize("postgres://postgres:db_password@postgres:5432/postgres", {
   dialect: "postgres"
 });
 
