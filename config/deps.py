@@ -11,4 +11,11 @@ packages = [
     "rbenv",
     # for scratch exercises
     "bash-static",
+    # for docker
+    "docker.io",
+    "docker-compose",
+    "docker-doc",
+    "docker-buildx",
+    "docker-clean",
+    "docker-registry",
 ]
