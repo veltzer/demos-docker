@@ -5,8 +5,10 @@ services:
     restart: unless-stopped
     ports:
       - "${env_db_port}:${env_db_port}"
+    secrets:
+      - postgres_password
     environment:
-      POSTGRES_PASSWORD: "${env_db_password}"
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
     volumes:
       - "postgres_data:/var/lib/postgresql/data"
     healthcheck:
@@ -19,6 +21,8 @@ services:
   adminer:
     image: adminer
     restart: unless-stopped
+    env_file:
+      - "${HOME}/.env"
     environment:
       # ADMINER_DATA: purge
       # ADMINER_ROOT: postgres
@@ -35,6 +39,8 @@ services:
     restart: unless-stopped
     ports:
       - "${env_postgrest_port}:${env_postgrest_port}"
+    env_file:
+      - "${HOME}/.env"
     environment:
       PGRST_DB_URI: "${env_db_type}://${env_db_user}:${env_db_password}@${env_db_host}:${env_db_port}/${env_db_name}"
       PGRST_SERVER_PORT: "${env_postgrest_port}" 
@@ -50,6 +56,8 @@ services:
     restart: unless-stopped
     ports:
       - "8081:8080"
+    env_file:
+      - "${HOME}/.env"
     environment:
       API_URL: "http://${env_postgrest_host}:${env_postgrest_port}/"
     depends_on:
@@ -62,7 +70,7 @@ services:
       dockerfile: Dockerfile
     image: app
     env_file:
-      - .env
+      - "${HOME}/.env"
     restart: unless-stopped
     ports:
       - "${env_app_port}:${env_app_port}"
@@ -72,3 +80,7 @@ services:
 
 volumes:
   postgres_data:
+
+secrets:
+  postgres_password:
+    file: "${HOME}/.secrets/postgres_password.txt"
