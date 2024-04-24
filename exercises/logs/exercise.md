@@ -40,3 +40,4 @@
     How can you redirect only errors to a file? (don't mind what is on the console)
     How can you redirect both outputs and errors to a file?
     How can you pipe both outputs and errors to another program? (say "wc -l")
+* Note: --log-driver json-file is the default

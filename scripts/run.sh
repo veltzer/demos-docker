@@ -5,4 +5,4 @@ then
 	source source.sh
 fi
 image_name=$(basename "${PWD}")
-docker run ${RUN_ARGS} "${image_name}"
+docker run ${RUN_ARGS} --name "${image_name}" "${image_name}"
