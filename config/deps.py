@@ -13,7 +13,7 @@ packages = [
     "bash-static",
     # for docker
     "docker.io",
-    "docker-compose",
+    # "docker-compose",
     "docker-doc",
     "docker-buildx",
     "docker-clean",
