@@ -14,8 +14,8 @@ packages = [
     # for docker
     "docker.io",
     # "docker-compose",
-    "docker-doc",
-    "docker-buildx",
-    "docker-clean",
-    "docker-registry",
+    # "docker-doc",
+    # "docker-buildx",
+    # "docker-clean",
+    # "docker-registry",
 ]
