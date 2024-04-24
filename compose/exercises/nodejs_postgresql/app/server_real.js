@@ -4,6 +4,8 @@ const express = require("express");
 const Sequelize = require("sequelize");
 const cors = require("cors");
 
+console.log(process.env);
+
 // get environment variables
 const env_app_port = parseInt(process.env.env_app_port, 10);
 const env_app_access = process.env.env_app_access;

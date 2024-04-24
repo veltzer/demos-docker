@@ -62,6 +62,10 @@ services:
       dockerfile: Dockerfile
     image: app
     restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - env_db_password=${env_db_password}
     ports:
       - "${env_app_port}:${env_app_port}"
     depends_on:
