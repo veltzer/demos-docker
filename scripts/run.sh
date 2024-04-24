@@ -1,9 +1,8 @@
 #!/bin/bash -e
-if [ -f "RUN_ARGS" ]
+RUN_ARGS="-it"
+if [ -f "source.sh" ]
 then
-	read -r RUN_ARGS < RUN_ARGS
-else
-	RUN_ARGS="-it"
+	source source.sh
 fi
 image_name=$(basename "${PWD}")
 docker run ${RUN_ARGS} "${image_name}"
