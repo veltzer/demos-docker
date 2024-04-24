@@ -1,11 +1,12 @@
 services:
   my_service:
     environment:
-      more: ${PATH}
+      more1: ${PATH}
       more2: "${PATH}"
       more3: "${USER}:${PATH}"
     environment:
-      - more=${PATH}
+      - more1=${PATH}
       - more2="${PATH}"
       - more3="${USER}:${PATH}"
+      - more4=${USER}:${PATH}
     image: hello
