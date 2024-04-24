@@ -4,4 +4,3 @@ FROM ubuntu
 # now install anything you want
 # RUN apt-get install -yq [package]
 CMD ["/bin/bash"]
-
