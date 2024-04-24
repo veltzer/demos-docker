@@ -1,3 +1,4 @@
+# shellcheck disable=SC2034
 RUN_ARGS="--interactive"
 # this will fail:
 # RUN_ARGS=""

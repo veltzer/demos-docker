@@ -2,6 +2,7 @@
 RUN_ARGS="-it"
 if [ -f "source.sh" ]
 then
+	# shellcheck source=/dev/null
 	source source.sh
 fi
 image_name=$(basename "${PWD}")

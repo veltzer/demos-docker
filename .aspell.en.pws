@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1004 
+personal_ws-1.1 en 1006 
 AARRR
 ACLs
 ADPlus
@@ -779,6 +779,7 @@ jdk
 jenkins
 journaled
 jprobes
+json
 kdb
 kernelshark
 kexec
@@ -934,6 +935,7 @@ stylesheets
 subnets
 sudo
 syllabi
+syntaxes
 sys
 syscalls
 sysctl
