@@ -1,3 +1,3 @@
-FROM python:3-slim
+FROM python:3-alpine
 COPY app.py /
 CMD ["/app.py"]

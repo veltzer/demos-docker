@@ -6,4 +6,4 @@ RUN mkdir myapp
 COPY module /myapp/module
 COPY tests /myapp/tests
 WORKDIR myapp
-CMD PYTHONPATH=. python -m pytest
+CMD ["PYTHONPATH=.","python","-m","pytest"]
