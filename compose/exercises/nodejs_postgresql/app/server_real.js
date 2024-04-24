@@ -5,7 +5,7 @@ const Sequelize = require("sequelize");
 const cors = require("cors");
 
 // debug - dump all environment
-// console.log(process.env);
+console.log(process.env);
 
 // get environment variables
 const env_app_port = parseInt(process.env.env_app_port, 10);
