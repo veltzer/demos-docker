@@ -1,2 +1,2 @@
 #!/bin/bash -e
-mysql -h 127.0.0.1 -u root mysql -p
+mysql --host="127.0.0.1" --user="${env_db_user}" --password="${env_db_password}" mysql
