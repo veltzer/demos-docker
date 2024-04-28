@@ -145,6 +145,11 @@ check:
 # git grep latest -- **/Dockerfile
 # git grep latest
 
+.PHONY: spell_many
+spell_many:
+	$(info doing [$@])
+	$(Q)aspell_many.sh $(MD_SRC)
+
 ############
 # patterns #
 ############
