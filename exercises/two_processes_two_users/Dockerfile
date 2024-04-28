@@ -1,4 +1,6 @@
 FROM ubuntu
+RUN apt-get update -y
+RUN apt-get install -y adduser
 RUN adduser app1
 RUN adduser app2
 COPY app1.bash /home/app1
