@@ -1,0 +1,5 @@
+[mysqld]
+general_log=1
+# This does not work with the error "Could not use /dev/stdout for logging..."
+# general_log_file=/dev/stdout
+general_log_file=/var/log/mysql/general.log

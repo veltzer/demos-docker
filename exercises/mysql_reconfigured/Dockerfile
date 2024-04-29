@@ -1,3 +1,5 @@
 FROM mysql:latest
 
-COPY turn_on_log.cnf /etc/mysql/conf.d
+COPY custom.cnf /etc/mysql/conf.d
+
+COPY init.sh /docker-entrypoint-initdb.d/

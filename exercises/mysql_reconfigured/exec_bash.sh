@@ -1,3 +1,3 @@
 #!/bin/bash -e
 image_name=$(basename "${PWD}")
-docker exec -it mysql_reconfigured /bin/bash
+docker exec -it "${image_name}" bash
