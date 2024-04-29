@@ -13,4 +13,5 @@ then
 	docker kill "${image_name}"
 	sleep 5
 fi
+# shellcheck disable=SC2086
 docker run ${RUN_ARGS} --name "${image_name}" "${image_name}"
