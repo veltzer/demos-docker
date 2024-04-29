@@ -6,5 +6,5 @@ Create an image of MySQL which is configured with the log turned on.
 Make that log be visible through the docker logging system:
 
 ```bash
-    $ docker logs [container_name]
+    $ docker logs -f [container_name]
 ```
