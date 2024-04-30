@@ -1,20 +1,23 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Super simple web server
 """
 
 import time
+import logging
 from flask import Flask
 
 
-app = Flask("app")
+log = logging.getLogger("werkzeug")
+log.setLevel(logging.INFO)
+app = Flask("first")
 
 
 @app.route("/")
 def root():
     """ catch all urls """
-    print("in root")
+    log.info("in root")
     return "<html><body><h1>python with flask in a docker<h1></body><html>"
 
 # fake delay
