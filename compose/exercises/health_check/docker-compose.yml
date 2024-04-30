@@ -1,11 +1,20 @@
+networks:
+  my-network:
+    driver: bridge
+
 services:
   first:
     build:
       context: first
     ports:
       - "8080:8080"
+    networks:
+      - my-network
   second:
     build:
       context: second
+    networks:
+      - my-network
     depends_on:
-      - first
+      first:
+        condition: service_healthy
