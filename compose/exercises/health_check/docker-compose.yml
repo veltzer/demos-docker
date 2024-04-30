@@ -1,0 +1,9 @@
+services:
+  first:
+    build:
+      context: first
+  second:
+    build:
+      context: second
+    depends_on:
+      - first
