@@ -8,9 +8,10 @@ Use the docker health check feature to know when the first app is up.
 
 There are two ways to use the health check:
 * the container can explain to docker how to health check itself.
-    in this case the second service will depend on the first one (plainly).
 * we can explain to docker(/compose) how to health check the container in the `docker-compose.yml` file.
-    in this case the second service will depend on the first one being healthy.
+
+In both cases you must state that you depend on the container with a state of healthy and not just depend
+on the container.
 
 Number 1 is better for obvious reasons.
 
