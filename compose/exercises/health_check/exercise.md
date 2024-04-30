@@ -10,5 +10,11 @@ Make the second app depend on the health check of the first one.
 
 See that the second one is brought up only after the first one is healthy.
 
+look at the logs using:
+
+```bash
+docker-compose logs
+```
+
 ## References
 - [link](https://docs.docker.com/reference/dockerfile/#healthcheck)
