@@ -1,4 +1,3 @@
-# FROM bash
 FROM ubuntu
 RUN apt-get update -y
 RUN apt-get install -y libcap2-bin systemd-sysv iproute2
