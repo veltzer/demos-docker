@@ -1,10 +1,20 @@
 """
 os level dependencies for this project
 """
-packages_remove = [
+
+import platform
+
+
+desktop = platform.freedesktop_os_release()
+VERSION_ID = desktop["VERSION_ID"]
+
+
+packages_remove = []
+
+if VERSION_ID == "22.04":
     # because of conflict with containerd which is needed by "docker.io" below
-    # "containerd.io",
-]
+    packages_remove.append("containerd.io")
+
 
 packages = [
     # for compiling .net
