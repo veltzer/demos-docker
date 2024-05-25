@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1008 
+personal_ws-1.1 en 1010 
 AARRR
 ACLs
 ADPlus
@@ -208,6 +208,7 @@ GStreamer
 GTK
 GW
 Gartner
+GenHTTP
 Geospatial
 Gerrit
 Getters
@@ -320,6 +321,7 @@ LogStash
 Logstash
 Logz
 Looper
+Lorahost
 Lucene
 LynuxWorks
 MCU

@@ -1,4 +1,4 @@
-﻿## Sub Section
+# Sub Section
 
 This is the sub section of section 1.
 
