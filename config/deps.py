@@ -3,7 +3,7 @@ os level dependencies for this project
 """
 packages_remove = [
     # because of conflict with containerd which is needed by "docker.io" below
-    "containerd.io",
+    # "containerd.io",
 ]
 
 packages = [
