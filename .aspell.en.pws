@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1006 
+personal_ws-1.1 en 1008 
 AARRR
 ACLs
 ADPlus
@@ -154,6 +154,7 @@ Dimensionality
 DocBook
 Dockerfile
 Dojo
+Dotnet
 Downcasting
 DropBoxManager
 Dtors
@@ -707,6 +708,7 @@ dlopen
 dlsym
 dmalloc
 dojo
+dotnet
 du
 dynamiccast
 eXtreme
