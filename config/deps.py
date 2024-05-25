@@ -7,6 +7,8 @@ packages_remove = [
 ]
 
 packages = [
+    # for compiling .net
+    "dotnet-sdk-8.0",
     # spell check md files
     "aspell",
     # lint .sh and .bash files
