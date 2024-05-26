@@ -1,15 +1,17 @@
 services:
-
-  server:
-    build:
-      context: server
-      dockerfile: Dockerfile
-    ports:
-      - "8080:80"
-
   cors:
     build:
       context: cors
       dockerfile: Dockerfile
     ports:
       - "8081:80"
+  server:
+    build:
+      context: server
+      dockerfile: Dockerfile
+    depends_on:
+      - "cors"
+    ports:
+      - "8080:80"
+    links:
+      - "server:cors"
