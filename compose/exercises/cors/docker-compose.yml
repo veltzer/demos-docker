@@ -1,3 +1,7 @@
+networks:
+  my-network:
+    driver: bridge
+
 services:
   cors:
     build:
@@ -5,13 +9,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8081:80"
+    networks:
+      - my-network
   server:
     build:
       context: server
       dockerfile: Dockerfile
-    depends_on:
-      - "cors"
     ports:
       - "8080:80"
-    links:
-      - "server:cors"
+    networks:
+      - my-network
