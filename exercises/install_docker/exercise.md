@@ -4,13 +4,10 @@ Install docker in Ubuntu:
 * You need to have an Ubuntu virtual machine.
 * Install the following packages:
     `docker.io`
-    `containerd`
-    `docker-buildx`
     with:
-    `$ sudo apt install docker.io containerd docker-buildx`
+    `$ sudo apt install docker.io
 * After the installation you can see them running with:
     `$ ps -ef | grep dockerd`
-    `$ ps -ef | grep containerd`
 
 Adding yourself to the docker group:
 * Check if you are in the docker group using the command:
