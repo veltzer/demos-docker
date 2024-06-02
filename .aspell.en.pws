@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1010 
+personal_ws-1.1 en 1012 
 AARRR
 ACLs
 ADPlus
@@ -709,11 +709,13 @@ distutils
 dlopen
 dlsym
 dmalloc
+dockerd
 dojo
 dotnet
 du
 dynamiccast
 eXtreme
+ef
 elasticsearch
 elif
 enum
