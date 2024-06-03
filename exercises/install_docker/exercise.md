@@ -7,7 +7,7 @@ Install docker in Ubuntu:
 `docker.io`
 
 with:
-    
+
 `$ sudo apt install docker.io`
 
 * After the installation you can see them running with:
