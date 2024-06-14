@@ -3,10 +3,11 @@
 This demo shows that by default docker runs it's process
 as root.
 
-To see you can use:
+To see this you can use:
     $UID
     $EUID
     $USER
     whoami
     id
     ps
+    capsh --print

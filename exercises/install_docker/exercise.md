@@ -34,4 +34,4 @@ and now check that you can talk to the nginx that you just installed by pointing
 you browser to:
     `localhost:80
 
-* if you dint have `netstat` then install the `net-tools` package.
+* if you dont have `netstat` then install the `net-tools` package.
