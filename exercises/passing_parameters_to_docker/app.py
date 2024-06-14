@@ -6,11 +6,12 @@ Simple python logging applcation
 
 import time
 import sys
+import os
 
 if len(sys.argv) > 1:
     name = sys.argv[1]
 else:
-    name = "mark"
+    name = os.environ.get("name", "mark")
 
 i = 0
 while True:
