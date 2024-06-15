@@ -1,2 +1,2 @@
 #!/bin/bash -e
-mvn compile
+gradle build
