@@ -1,4 +1,4 @@
-# Hello Gradle
+# Build using Gradle
 
 * Build java software inside docker using Gradle
 
