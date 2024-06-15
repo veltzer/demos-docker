@@ -17,7 +17,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'com.company.App'
+    mainClass = 'com.company.HelloWorld'
 }
 
 test {
