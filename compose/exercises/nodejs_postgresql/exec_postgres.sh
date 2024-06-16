@@ -1,2 +1,2 @@
 #!/bin/bash -e
-docker-compose exec postgres bash
+docker compose exec postgres bash

@@ -1,2 +1,2 @@
 #!/bin/bash -e
-docker-compose up --detach
+docker compose up --detach

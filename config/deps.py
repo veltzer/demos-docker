@@ -30,7 +30,8 @@ packages = [
     "bash-static",
     # for docker
     "docker.io",
-    # "docker-compose",
+    # the right package for docker compose
+    "docker-compose-v2",
     # "docker-doc",
     # "docker-buildx",
     # "docker-clean",
