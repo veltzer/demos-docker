@@ -1,6 +1,6 @@
 #!/bin/sh
 image_name=$(basename "${PWD}")
-id=$(docker run --detach --restart on-failure:3 "${image_name}")
+id=$(docker run --detach --restart="on-failure:3" "${image_name}")
 echo "id is ${id}"
 while true
 do
