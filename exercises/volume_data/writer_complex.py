@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 """
-This write always continues from where it had left of
+A writer that continues to write where it left off
 """
 
+import sys
 import time
 import os.path
 
@@ -24,7 +25,8 @@ def main():
         while True:
             stream.write(f"{i}\n")
             stream.flush()
-            print("oops, I did it again...")
+            print("just wrote {i}...")
+            sys.stdout.flush()
             time.sleep(1)
             i += 1
 
