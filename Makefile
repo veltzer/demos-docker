@@ -3,10 +3,10 @@
 ##########
 # do you want to see the commands executed ?
 DO_MKDBG:=0
-# do you want to check bash syntax?
-DO_SHELLCHECK:=1
 # do you want dependency on the Makefile itself ?
 DO_ALLDEP:=1
+# do you want to check bash syntax?
+DO_SHELLCHECK:=1
 # do you want to check python syntax?
 DO_SYNTAX:=1
 # do you want to lint python files using pylit?
@@ -37,11 +37,6 @@ else # DO_MKDBG
 Q:=@
 #.SILENT:
 endif # DO_MKDBG
-
-# dependency on the makefile itself
-ifeq ($(DO_ALLDEP),1)
-.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
-endif # DO_ALLDEP
 
 ALL_SH:=$(shell find . -type f -name "*.sh" -and -not -path "./.venv/*" -and -not -path "./config/*" -printf "%P\n")
 ALL_SHELLCHECK:=$(addprefix out/, $(addsuffix .shellcheck, $(ALL_SH)))
@@ -190,3 +185,10 @@ $(DOCKER_PUSH): out/%.push: %
 	$(info doing [$@])
 	$(Q)cd $$(dirname $<); ../../scripts/push.sh
 	$(Q)pymakehelper touch_mkdir $@
+
+##########
+# alldep #
+##########
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP
