@@ -20,7 +20,7 @@ DO_MD_MDL:=1
 # do spell check on all?
 DO_MD_ASPELL:=1
 # build docker images?
-DO_DOCKER_BUILD:=1
+DO_DOCKER_BUILD:=$(shell scripts/docker_up.sh)
 # push docker images?
 DO_DOCKER_PUSH:=0
 
