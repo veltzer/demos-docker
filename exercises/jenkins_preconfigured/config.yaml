@@ -6,7 +6,7 @@ jenkins:
   - kubernetes:
       containerCap: 10
       containerCapStr: "10"
-      jnlpregistry: "fubar"
-      name: "marks-k8s"
-      namespace: "foo"
+      jnlpregistry: "name-of-your-registry"
+      name: "name-of-your-k8s-cluster"
+      namespace: "put-your-k8s-namespace-here"
       serverUrl: "192.167.45.6"

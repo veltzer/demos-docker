@@ -3,6 +3,6 @@ ENV PIP_ROOT_USER_ACTION=ignore
 RUN pip install --upgrade pip
 RUN pip install flask
 RUN mkdir app
-COPY app.py /app
 WORKDIR app
+COPY app.py .
 CMD ["./app.py"]
