@@ -12,6 +12,7 @@ with open("output.txt", "w", encoding="utf-8") as f:
     i = 0
     while True:
         f.write(f"hello {i}...\n")
+        print(f"hello {i}...")
         f.flush()
         time.sleep(1)
         i += 1

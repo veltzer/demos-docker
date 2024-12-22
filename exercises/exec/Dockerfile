@@ -1,5 +1,5 @@
-FROM python:3-alpine
-# FROM python:3-slim
+FROM python:3-slim
+# FROM python:3-alpine
 # FROM python:3
 # FROM ubuntu
 # RUN apt-get update -y

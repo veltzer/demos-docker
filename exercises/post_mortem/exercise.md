@@ -17,4 +17,4 @@
 
 ## Advanced
 * create a new image from your deceased container using the `docker commit`
-    command and explore it with `docker run` and bash.
+    command and explore it with `docker run` and `bash`.
