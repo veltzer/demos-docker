@@ -5,11 +5,10 @@ ENV PIP_ROOT_USER_ACTION=ignore
 RUN pip install --upgrade pip
 
 # install requirement
-COPY requirements.txt /app
+COPY requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt
 
 # install your app
-RUN mkdir /app
 COPY app.py /app
 WORKDIR /app
 CMD ["./app.py"]
