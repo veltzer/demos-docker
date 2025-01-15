@@ -17,11 +17,11 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 
 ## How to run
 
-* 'docker.io' must be installed and running.
+* `docker.io` must be installed and running.
 * user running must be in group 'docker'.
 
 ## Number of examples
 
-Currently there are 61 examples in this repo.
+Currently there are 63 examples in this repo.
 
-Mark Veltzer, Copyright © 2019, 2020, 2021, 2022, 2023, 2024
+Mark Veltzer, Copyright © 2019, 2020, 2021, 2022, 2023, 2024, 2025
