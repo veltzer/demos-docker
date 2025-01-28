@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1013 
+personal_ws-1.1 en 1015 
 AARRR
 ACLs
 ADPlus
@@ -139,6 +139,7 @@ Datatypes
 DateOffset
 DateTimeIndex
 DbUnit
+Ddup
 DebugDiag
 DebugView
 Debuginfo
@@ -690,6 +691,7 @@ cve
 cyclictest
 dataset
 datetime
+ddup
 de
 debugfs
 debuggable
