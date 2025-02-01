@@ -1,3 +1,3 @@
 #!/bin/bash -e
-docker buildx build --tag app_a --file a.dockerfile .
-docker buildx build --tag app_b --file b.dockerfile .
+docker buildx build --load --tag app_a --file a.dockerfile .
+docker buildx build --load --tag app_b --file b.dockerfile .
