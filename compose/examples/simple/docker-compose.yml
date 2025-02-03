@@ -1,0 +1,13 @@
+services:
+  nginx1:
+    image: nginx
+    networks:
+      - my-network
+  nginx2:
+    image: nginx
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
