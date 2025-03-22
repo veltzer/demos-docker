@@ -1,5 +1,5 @@
 """
-os level dependencies for this project
+Ubuntu system level depenencies for this project
 """
 
 import platform
