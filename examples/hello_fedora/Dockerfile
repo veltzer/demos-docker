@@ -1,2 +1,2 @@
-FROM centos
+FROM fedora
 CMD ["/bin/bash"]
