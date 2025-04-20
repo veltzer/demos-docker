@@ -39,4 +39,5 @@ packages = [
     # "docker-buildx",
     # "docker-clean",
     # "docker-registry",
+    "golang-docker-credential-helpers",
 ]

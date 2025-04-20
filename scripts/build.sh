@@ -4,4 +4,5 @@ then
 	./before_build.sh
 fi
 image_name=$(basename "${PWD}")
+# docker buildx build --load --tag "${image_name}" --progress=plain .
 docker buildx build --load --tag "${image_name}" .
