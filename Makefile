@@ -38,10 +38,10 @@ Q:=@
 #.SILENT:
 endif # DO_MKDBG
 
-ALL_SH:=$(shell find . -type f -name "*.sh" -and -not -path "./.venv/*" -and -not -path "./config/*" -printf "%P\n")
+ALL_SH:=$(shell find . -type f -name "*.sh" -and -not -path "./.venv/*" -and -not -path "./node_modules/*" -printf "%P\n")
 ALL_SHELLCHECK:=$(addprefix out/, $(addsuffix .shellcheck, $(ALL_SH)))
 
-ALL_PY:=$(shell find . -type f -name "*.py" -and -not -path "./.venv/*" -and -not -path "./config/*" -printf "%P\n")
+ALL_PY:=$(shell find . -type f -name "*.py" -and -not -path "./.venv/*" -and -not -path "./node_modules/*" -printf "%P\n")
 ALL_SYNTAX:=$(addprefix out/,$(addsuffix .syntax, $(basename $(ALL_PY))))
 ALL_PYLINT:=$(addprefix out/,$(addsuffix .pylint, $(basename $(ALL_PY))))
 ALL_FLAKE8:=$(addprefix out/,$(addsuffix .flake8, $(basename $(ALL_PY))))
@@ -156,7 +156,7 @@ $(ALL_SYNTAX): out/%.syntax: %.py
 	$(info doing [$@])
 	$(Q)pycmdtools python_check_syntax $<
 	$(Q)pymakehelper touch_mkdir $@
-$(ALL_PYLINT): out/%.pylint: %.py
+$(ALL_PYLINT): out/%.pylint: %.py .pylintrc
 	$(info doing [$@])
 	$(Q)python -m pylint --reports=n --score=n $<
 	$(Q)pymakehelper touch_mkdir $@

@@ -1,3 +1,5 @@
+""" python requirements for this project """
+
 from typing import List
 
 
@@ -24,6 +26,7 @@ build_requires: List[str] = [
     "pyflakes",
     "mypy",
     "pydmt",
+    "pyclassifiers",
 ]
 test_requires: List[str] = []
 requires = config_requires + install_requires + build_requires + test_requires

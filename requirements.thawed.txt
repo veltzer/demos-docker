@@ -15,3 +15,4 @@ flake8
 pyflakes
 mypy
 pydmt
+pyclassifiers
