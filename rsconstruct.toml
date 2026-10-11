@@ -46,12 +46,12 @@ src_dirs = ["scripts", "config", "exercises"]
 
 # ─── shell ───────────────────────────────────────────────────────────────────
 
-# --external-sources lets shellcheck follow the tracked .env files that the
+# external_sources lets ishellcheck follow the tracked .env files that the
 # compose exercises source, so their variables are seen as assigned.
-[processor.checker.shellcheck]
+[processor.checker.ishellcheck]
 src_dirs = ["scripts", "exercises", "config", "compose", "examples", "fun"]
 src_files = [".auto.enter.sh", ".auto.exit.sh"]
-args = ["--external-sources"]
+external_sources = true
 
 # ─── lua ─────────────────────────────────────────────────────────────────────
 
@@ -99,9 +99,8 @@ args = [
 
 # ─── java ────────────────────────────────────────────────────────────────────
 
-[processor.checker.checkstyle]
+[processor.checker.icheckstyle]
 src_dirs = ["exercises"]
-args = ["-c", "checkstyle.xml"]
 
 # ─── html ────────────────────────────────────────────────────────────────────
 
