@@ -100,7 +100,7 @@ src_dirs = ["compose/exercises/cors"]
 
 # ─── css ─────────────────────────────────────────────────────────────────────
 
-# Only .css is passed: biome.jsonc turns biome's JavaScript and JSON linters
+# Only .css is passed: .biome.jsonc turns biome's JavaScript and JSON linters
 # off, oxlint covers JavaScript and ijsonlint covers JSON.
 [processor.checker.biome]
 src_dirs = ["examples/hello_dotnet_build_and_run/test/Styles"]

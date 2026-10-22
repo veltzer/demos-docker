@@ -17,7 +17,7 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": false,
+			"preset": "none",
 			"correctness": {
 				"noInvalidGridAreas": "error",
 				"noInvalidPositionAtImportRule": "error",
@@ -35,11 +35,9 @@
 				"noEmptyBlock": "error",
 				"noImportantInKeyframe": "error",
 				"noIrregularWhitespace": "error",
-				"noShorthandPropertyOverrides": "error"
-			},
-			"nursery": {
-				// stylelint's no-duplicate-selectors; still a nursery rule in
-				// biome, enabled explicitly because nursery is off by default
+				"noShorthandPropertyOverrides": "error",
+				// stylelint's no-duplicate-selectors; biome has since
+				// promoted it out of nursery into suspicious
 				"noDuplicateSelectors": "error"
 			}
 		}
